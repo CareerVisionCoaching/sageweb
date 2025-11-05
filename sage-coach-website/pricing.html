@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Meta Tags -->
+  <title>Pricing - Sage.coach | Simple, Transparent Pricing for Coaches</title>
+  <meta name="description" content="Start at $29/month with unlimited clients. 14-day free trial, no credit card required. Plans for solo coaches to multi-coach organizations.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pricing - Sage.coach">
+  <meta property="og:description" content="Simple, transparent pricing for career coaches. Start at $29/month with 14-day free trial.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sage.coach/pricing">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sage.coach/pricing">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/components.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <style>
+    .pricing-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-2xs);
+      margin: var(--spacing-sm) 0;
+    }
+
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 32px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--color-gray-300);
+      transition: var(--transition-medium);
+      border-radius: 32px;
+    }
+
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 24px;
+      width: 24px;
+      left: 4px;
+      bottom: 4px;
+      background-color: var(--color-white);
+      transition: var(--transition-medium);
+      border-radius: 50%;
+    }
+
+    input:checked + .toggle-slider {
+      background-color: var(--color-sage-green);
+    }
+
+    input:checked + .toggle-slider:before {
+      transform: translateX(28px);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-lg);
+    }
+
+    .pricing-card {
+      background: var(--color-white);
+      border-radius: var(--radius-large);
+      padding: var(--spacing-md);
+      border: 2px solid var(--color-gray-200);
+      transition: all var(--transition-medium);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--color-deep-forest);
+      box-shadow: var(--shadow-lg);
+      transform: scale(1.05);
+      position: relative;
+    }
+
+    .pricing-card.featured::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-deep-forest);
+      color: var(--color-white);
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: var(--font-size-body-small);
+      font-weight: var(--font-weight-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .pricing-card:hover {
+      border-color: var(--color-sage-green);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .pricing-card.featured:hover {
+      transform: scale(1.05) translateY(-4px);
+    }
+
+    .price-header {
+      text-align: center;
+      padding-bottom: var(--spacing-xs);
+      border-bottom: 1px solid var(--color-gray-200);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .price-subtitle {
+      font-size: var(--font-size-body-small);
+      color: var(--color-gray-600);
+      margin-bottom: var(--spacing-3xs);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: var(--font-weight-medium);
+    }
+
+    .price-amount {
+      font-size: var(--font-size-h2-desktop);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-deep-forest);
+      margin-bottom: var(--spacing-3xs);
+    }
+
+    .price-period {
+      font-size: var(--font-size-body-regular);
+      color: var(--color-gray-600);
+    }
+
+    .price-annual-info {
+      font-size: var(--font-size-body-small);
+      color: var(--color-sage-green);
+      margin-top: var(--spacing-3xs);
+    }
+
+    .price-ideal-for {
+      font-size: var(--font-size-body-small);
+      color: var(--color-gray-600);
+      margin-bottom: var(--spacing-xs);
+      text-align: center;
+      font-style: italic;
+    }
+
+    .price-features {
+      list-style: none;
+      padding: 0;
+      margin: var(--spacing-xs) 0;
+      flex-grow: 1;
+    }
+
+    .price-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-3xs);
+      margin-bottom: var(--spacing-2xs);
+      font-size: var(--font-size-body-regular);
+    }
+
+    .price-cta {
+      margin-top: var(--spacing-xs);
+    }
+
+    @media (max-width: 1023px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-card.featured {
+        transform: none;
+      }
+
+      .pricing-card.featured:hover {
+        transform: translateY(-4px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="header-logo" aria-label="Sage.coach home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="16" cy="16" r="16" fill="#355C4C"/>
+          <path d="M16 8C12 8 10 12 10 16C10 20 12 24 16 24C20 24 22 20 22 16C22 12 20 8 16 8Z" fill="#A3B9A0"/>
+        </svg>
+        <span>sage.coach</span>
+      </a>
+
+      <nav class="header-nav" aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/features.html" class="nav-link">Features</a></li>
+          <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="/about.html" class="nav-link">About</a></li>
+          <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <a href="https://app.sage.coach/signup" class="btn btn-primary" data-analytics="cta_header_trial">
+          Start Free Trial
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="bg-soft-ivory section" style="padding-top: var(--spacing-2xl);">
+      <div class="container text-center" style="max-width: 840px;">
+        <h1>Pricing Built for Coaches</h1>
+        <p class="text-large" style="max-width: 640px; margin: var(--spacing-xs) auto var(--spacing-sm);">
+          One simple plan. All features included. Scale your practice without scaling your costs.
+        </p>
+
+        <!-- Pricing Toggle -->
+        <div class="pricing-toggle">
+          <span id="monthlyLabel">Monthly</span>
+          <label class="toggle-switch" for="pricingToggle">
+            <input type="checkbox" id="pricingToggle" aria-labelledby="monthlyLabel annualLabel">
+            <span class="toggle-slider"></span>
+          </label>
+          <span id="annualLabel">Annual <span style="color: var(--color-sage-green); font-weight: var(--font-weight-semibold);">(Save 20%)</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="bg-soft-ivory" style="padding-bottom: var(--spacing-2xl);">
+      <div class="container">
+        <div class="pricing-grid">
+
+          <!-- Starter Plan -->
+          <div class="pricing-card">
+            <div class="price-header">
+              <p class="price-subtitle">Starter</p>
+              <div class="price-monthly">
+                <div class="price-amount">$29<span class="price-period">/month</span></div>
+              </div>
+              <div class="price-annual" style="display: none;">
+                <div class="price-amount">$290<span class="price-period">/year</span></div>
+                <p class="price-annual-info">Save $58 annually</p>
+              </div>
+            </div>
+
+            <p class="price-ideal-for">Perfect for new or solo coaches</p>
+
+            <ul class="price-features">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span><strong>Up to 5 active clients</strong></span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Full client dashboards</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Roadmap templates</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Session tracking & notes</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Calendar integration</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Email support</span>
+              </li>
+            </ul>
+
+            <div class="price-cta">
+              <a href="https://app.sage.coach/signup?plan=starter" class="btn btn-secondary" style="width: 100%;" data-analytics="cta_pricing_starter">
+                Start Free Trial
+              </a>
+            </div>
+          </div>
+
+          <!-- Professional Plan (Featured) -->
+          <div class="pricing-card featured">
+            <div class="price-header">
+              <p class="price-subtitle">Professional</p>
+              <div class="price-monthly">
+                <div class="price-amount">$79<span class="price-period">/month</span></div>
+              </div>
+              <div class="price-annual" style="display: none;">
+                <div class="price-amount">$790<span class="price-period">/year</span></div>
+                <p class="price-annual-info">Save $158 annually</p>
+              </div>
+            </div>
+
+            <p class="price-ideal-for">For experienced coaches scaling their practice</p>
+
+            <ul class="price-features">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span><strong>Unlimited clients</strong></span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span><strong>Everything in Starter, plus:</strong></span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Review requests & feedback hub</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Automation rules & workflows</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Advanced analytics & reporting</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Priority support</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Custom branding options</span>
+              </li>
+            </ul>
+
+            <div class="price-cta">
+              <a href="https://app.sage.coach/signup?plan=professional" class="btn btn-primary" style="width: 100%;" data-analytics="cta_pricing_professional">
+                Start Free Trial
+              </a>
+            </div>
+          </div>
+
+          <!-- Team / Head Coach Plan -->
+          <div class="pricing-card">
+            <div class="price-header">
+              <p class="price-subtitle">Team / Head Coach</p>
+              <div class="price-monthly">
+                <div class="price-amount">$199<span class="price-period">/month</span></div>
+              </div>
+              <div class="price-annual" style="display: none;">
+                <div class="price-amount">$1,990<span class="price-period">/year</span></div>
+                <p class="price-annual-info">Save $398 annually</p>
+              </div>
+            </div>
+
+            <p class="price-ideal-for">Multi-coach organizations & firms</p>
+
+            <ul class="price-features">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span><strong>Everything in Professional, plus:</strong></span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Multi-coach dashboard</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Team permissions & roles</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Organization-wide analytics</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Program & milestone management</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>White-glove onboarding</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Advanced integrations</span>
+              </li>
+            </ul>
+
+            <div class="price-cta">
+              <a href="https://app.sage.coach/signup?plan=team" class="btn btn-secondary" style="width: 100%;" data-analytics="cta_pricing_team">
+                Start Free Trial
+              </a>
+            </div>
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div class="pricing-card" style="grid-column: 1 / -1; max-width: 400px; margin: 0 auto; width: 100%;">
+            <div class="price-header">
+              <p class="price-subtitle">Enterprise</p>
+              <div class="price-amount" style="font-size: var(--font-size-h3-desktop);">Custom</div>
+              <p class="price-period">Annual contracts only</p>
+            </div>
+
+            <p class="price-ideal-for">Universities, accelerators, corporate programs</p>
+
+            <ul class="price-features">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span><strong>Everything in Team, plus:</strong></span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>SSO & custom domain</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Dedicated success manager</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>API access</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
+                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Custom reporting & integrations</span>
+              </li>
+            </ul>
+
+            <div class="price-cta">
+              <a href="/contact.html" class="btn btn-secondary" style="width: 100%;" data-analytics="cta_pricing_enterprise">
+                Contact Sales
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-white section-lg">
+      <div class="container" style="max-width: 840px;">
+        <h2 class="text-center" style="margin-bottom: var(--spacing-lg);">Frequently Asked Questions</h2>
+
+        <div style="display: flex; flex-direction: column; gap: var(--spacing-xs);">
+          <details class="card" style="cursor: pointer;">
+            <summary style="font-size: var(--font-size-h5); font-weight: var(--font-weight-semibold); padding: var(--spacing-2xs); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>What happens after my 14-day trial?</span>
+              <span style="font-size: 24px; transition: transform var(--transition-fast);">+</span>
+            </summary>
+            <div style="padding: 0 var(--spacing-2xs) var(--spacing-2xs);">
+              <p>Your trial gives you full access to all features. No credit card required to start. At the end of 14 days, you can choose a plan that fits your needs. If you don't select a plan, your account will simply pause—no surprise charges.</p>
+            </div>
+          </details>
+
+          <details class="card" style="cursor: pointer;">
+            <summary style="font-size: var(--font-size-h5); font-weight: var(--font-weight-semibold); padding: var(--spacing-2xs); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Can I cancel anytime?</span>
+              <span style="font-size: 24px; transition: transform var(--transition-fast);">+</span>
+            </summary>
+            <div style="padding: 0 var(--spacing-2xs) var(--spacing-2xs);">
+              <p>Yes! You can cancel your subscription at any time with no penalties. If you cancel, you'll continue to have access until the end of your billing period, and you can export all your data.</p>
+            </div>
+          </details>
+
+          <details class="card" style="cursor: pointer;">
+            <summary style="font-size: var(--font-size-h5); font-weight: var(--font-weight-semibold); padding: var(--spacing-2xs); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Can I upgrade or downgrade my plan later?</span>
+              <span style="font-size: 24px; transition: transform var(--transition-fast);">+</span>
+            </summary>
+            <div style="padding: 0 var(--spacing-2xs) var(--spacing-2xs);">
+              <p>Absolutely. You can upgrade or downgrade at any time. Changes take effect immediately, and we'll prorate your billing automatically.</p>
+            </div>
+          </details>
+
+          <details class="card" style="cursor: pointer;">
+            <summary style="font-size: var(--font-size-h5); font-weight: var(--font-weight-semibold); padding: var(--spacing-2xs); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>What payment methods do you accept?</span>
+              <span style="font-size: 24px; transition: transform var(--transition-fast);">+</span>
+            </summary>
+            <div style="padding: 0 var(--spacing-2xs) var(--spacing-2xs);">
+              <p>We accept all major credit cards (Visa, Mastercard, Amex, Discover) through our secure payment processor, Stripe. Annual plans can also be paid via invoice for Enterprise customers.</p>
+            </div>
+          </details>
+
+          <details class="card" style="cursor: pointer;">
+            <summary style="font-size: var(--font-size-h5); font-weight: var(--font-weight-semibold); padding: var(--spacing-2xs); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Is my data secure?</span>
+              <span style="font-size: 24px; transition: transform var(--transition-fast);">+</span>
+            </summary>
+            <div style="padding: 0 var(--spacing-2xs) var(--spacing-2xs);">
+              <p>Yes. All data is encrypted at rest (AES-256) and in transit (SSL/TLS). We're GDPR and CCPA compliant, and SOC 2 certification is in progress. You own your data and can export it anytime.</p>
+            </div>
+          </details>
+
+          <details class="card" style="cursor: pointer;">
+            <summary style="font-size: var(--font-size-h5); font-weight: var(--font-weight-semibold); padding: var(--spacing-2xs); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Do you offer refunds?</span>
+              <span style="font-size: 24px; transition: transform var(--transition-fast);">+</span>
+            </summary>
+            <div style="padding: 0 var(--spacing-2xs) var(--spacing-2xs);">
+              <p>Yes. We offer a 30-day money-back guarantee. If Sage doesn't simplify your workflow or save you time within the first 30 days, we'll refund your payment—no questions asked.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-deep-forest section-lg" style="color: var(--color-white);">
+      <div class="container text-center" style="max-width: 640px;">
+        <h2 style="color: var(--color-white);">Ready to Get Started?</h2>
+        <p class="text-large" style="color: rgba(255, 255, 255, 0.9); margin-bottom: var(--spacing-md);">
+          Join coaches who are saving 40%+ of their admin time and delivering better results.
+        </p>
+
+        <div class="cta-group" style="justify-content: center; margin-bottom: var(--spacing-2xs);">
+          <a href="https://app.sage.coach/signup" class="btn btn-white btn-large" data-analytics="cta_pricing_final_trial">
+            Start Your Free Trial
+          </a>
+          <button class="btn btn-secondary btn-large" id="pricingBookDemo" data-analytics="cta_pricing_final_demo" style="border-color: var(--color-white); color: var(--color-white);">
+            Book a Demo
+          </button>
+        </div>
+
+        <p class="text-small" style="color: rgba(255, 255, 255, 0.7);">
+          No credit card required • 14-day free trial • Cancel anytime
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="header-logo" style="margin-bottom: var(--spacing-2xs); color: var(--color-white);">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="16" cy="16" r="16" fill="#A3B9A0"/>
+              <path d="M16 8C12 8 10 12 10 16C10 20 12 24 16 24C20 24 22 20 22 16C22 12 20 8 16 8Z" fill="#355C4C"/>
+            </svg>
+            <span>sage.coach</span>
+          </div>
+          <p class="text-small" style="color: rgba(255, 255, 255, 0.8);">
+            The operating system for career coaching.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h5>Product</h5>
+          <ul class="footer-links">
+            <li><a href="/features.html" class="footer-link">Features</a></li>
+            <li><a href="/pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="/roadmap.html" class="footer-link">Roadmap</a></li>
+            <li><a href="https://app.sage.coach/login" class="footer-link">Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="/about.html" class="footer-link">About</a></li>
+            <li><a href="/contact.html" class="footer-link">Contact</a></li>
+            <li><a href="/blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Legal</h5>
+          <ul class="footer-links">
+            <li><a href="/terms.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/cookies.html" class="footer-link">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Sage.coach. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Demo Modal -->
+  <div class="modal" id="demoModal" role="dialog" aria-labelledby="demoModalTitle" aria-modal="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="demoModalTitle">Book Your Demo</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="calEmbed" style="min-height: 600px;">
+          <iframe
+            src="https://cal.com/joshbob?embed=true"
+            width="100%"
+            height="600"
+            frameborder="0"
+            title="Book a demo with Sage.coach">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // FAQ accordion animation
+    document.querySelectorAll('details').forEach(detail => {
+      detail.addEventListener('toggle', function() {
+        const icon = this.querySelector('summary span:last-child');
+        if (this.open) {
+          icon.style.transform = 'rotate(45deg)';
+        } else {
+          icon.style.transform = 'rotate(0)';
+        }
+      });
+    });
+
+    // Add demo button to array
+    const pricingDemoBtn = document.getElementById('pricingBookDemo');
+    if (pricingDemoBtn) {
+      pricingDemoBtn.addEventListener('click', openDemoModal);
+    }
+  </script>
+</body>
+</html>
