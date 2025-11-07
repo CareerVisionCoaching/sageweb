@@ -63,11 +63,7 @@
   <header class="header" id="header">
     <div class="container">
       <a href="/" class="header-logo" aria-label="Sage.coach home">
-        <!-- Logo placeholder - replace with actual logo -->
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="16" cy="16" r="16" fill="#355C4C"/>
-          <path d="M16 8C12 8 10 12 10 16C10 20 12 24 16 24C20 24 22 20 22 16C22 12 20 8 16 8Z" fill="#A3B9A0"/>
-        </svg>
+        <img src="/images/logo-icon.png" width="32" height="32" alt="" aria-hidden="true" onerror="this.style.display='none'">
         <span>sage.coach</span>
       </a>
 
@@ -136,22 +132,11 @@
 
           <!-- Hero Visual (Right) -->
           <div class="hero-visual">
-            <!-- Placeholder for product dashboard mockup -->
-            <div style="background: linear-gradient(135deg, #DCE6DC 0%, #A3B9A0 100%); border-radius: var(--radius-large); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-2xl);">
-              <div style="text-align: center; padding: var(--spacing-md); color: var(--color-deep-forest);">
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto var(--spacing-2xs);">
-                  <rect x="8" y="12" width="48" height="40" rx="4" stroke="currentColor" stroke-width="2"/>
-                  <line x1="8" y1="20" x2="56" y2="20" stroke="currentColor" stroke-width="2"/>
-                  <circle cx="16" cy="16" r="2" fill="currentColor"/>
-                  <circle cx="24" cy="16" r="2" fill="currentColor"/>
-                  <circle cx="32" cy="16" r="2" fill="currentColor"/>
-                </svg>
-                <p style="font-size: var(--font-size-body-small); font-weight: var(--font-weight-medium);">
-                  [Dashboard Screenshot Placeholder]<br>
-                  <span style="font-size: var(--font-size-body-tiny); opacity: 0.7;">1200×900px PNG/WebP</span>
-                </p>
-              </div>
-            </div>
+            <img
+              src="/images/hero-dashboard-mockup.png"
+              alt="Sage dashboard showing client list with progress indicators and session history"
+              style="border-radius: var(--radius-large); width: 100%; height: auto; box-shadow: var(--shadow-2xl);"
+              loading="eager">
           </div>
         </div>
       </div>
@@ -260,12 +245,11 @@
       <div class="container" style="margin-bottom: var(--spacing-2xl);">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); align-items: center;">
           <div class="feature-image">
-            <div style="background: linear-gradient(135deg, #F9F9F6 0%, #DCE6DC 100%); border-radius: var(--radius-large); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-xl);">
-              <p style="color: var(--color-deep-forest); font-size: var(--font-size-body-small); text-align: center; padding: var(--spacing-md);">
-                [Client Dashboard Screenshot]<br>
-                <span style="font-size: var(--font-size-body-tiny); opacity: 0.7;">800×600px</span>
-              </p>
-            </div>
+            <img
+              src="/images/feature-client-management.png"
+              alt="Client dashboard with filters and progress tracking"
+              style="border-radius: var(--radius-large); width: 100%; height: auto; box-shadow: var(--shadow-xl);"
+              loading="lazy">
           </div>
           <div class="feature-content">
             <h3>See Every Client at a Glance</h3>
@@ -352,12 +336,11 @@
             </a>
           </div>
           <div class="feature-image">
-            <div style="background: linear-gradient(135deg, #F9F9F6 0%, #DCE6DC 100%); border-radius: var(--radius-large); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-xl);">
-              <p style="color: var(--color-deep-forest); font-size: var(--font-size-body-small); text-align: center; padding: var(--spacing-md);">
-                [Roadmap Screenshot]<br>
-                <span style="font-size: var(--font-size-body-tiny); opacity: 0.7;">800×600px</span>
-              </p>
-            </div>
+            <img
+              src="/images/feature-roadmaps.png"
+              alt="Visual career roadmap with milestone timeline and completion tracking"
+              style="border-radius: var(--radius-large); width: 100%; height: auto; box-shadow: var(--shadow-xl);"
+              loading="lazy">
           </div>
         </div>
       </div>
@@ -366,12 +349,11 @@
       <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); align-items: center;">
           <div class="feature-image">
-            <div style="background: linear-gradient(135deg, #F9F9F6 0%, #DCE6DC 100%); border-radius: var(--radius-large); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-xl);">
-              <p style="color: var(--color-deep-forest); font-size: var(--font-size-body-small); text-align: center; padding: var(--spacing-md);">
-                [Analytics Screenshot]<br>
-                <span style="font-size: var(--font-size-body-tiny); opacity: 0.7;">800×600px</span>
-              </p>
-            </div>
+            <img
+              src="/images/feature-analytics.png"
+              alt="Analytics dashboard with charts, graphs, and key coaching metrics"
+              style="border-radius: var(--radius-large); width: 100%; height: auto; box-shadow: var(--shadow-xl);"
+              loading="lazy">
           </div>
           <div class="feature-content">
             <h3>Capture Insights, Measure Impact</h3>
@@ -593,10 +575,7 @@
         <!-- Column 1: Brand -->
         <div class="footer-column">
           <div class="header-logo" style="margin-bottom: var(--spacing-2xs); color: var(--color-white);">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="16" cy="16" r="16" fill="#A3B9A0"/>
-              <path d="M16 8C12 8 10 12 10 16C10 20 12 24 16 24C20 24 22 20 22 16C22 12 20 8 16 8Z" fill="#355C4C"/>
-            </svg>
+            <img src="/images/logo-icon.png" width="32" height="32" alt="" aria-hidden="true" style="filter: brightness(1.2);" onerror="this.style.display='none'">
             <span>sage.coach</span>
           </div>
           <p class="text-small" style="color: rgba(255, 255, 255, 0.8);">

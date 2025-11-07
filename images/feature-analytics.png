@@ -1,0 +1,99 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="url(#grad3)"/>
+  <defs>
+    <linearGradient id="grad3" x1="0" y1="0" x2="800" y2="600">
+      <stop stop-color="#F9F9F6"/>
+      <stop offset="1" stop-color="#DCE6DC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container -->
+  <rect x="40" y="40" width="720" height="520" rx="12" fill="white" stroke="#DCE6DC" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="40" y="40" width="720" height="60" rx="12" fill="#355C4C"/>
+  <text x="70" y="77" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="white">Analytics Dashboard</text>
+
+  <!-- Metric cards -->
+  <g>
+    <rect x="70" y="130" width="200" height="100" rx="8" fill="#A3B9A0" opacity="0.15"/>
+    <text x="90" y="160" font-family="system-ui, sans-serif" font-size="13" fill="#355C4C">Active Clients</text>
+    <text x="90" y="200" font-family="system-ui, sans-serif" font-size="36" font-weight="bold" fill="#355C4C">24</text>
+  </g>
+
+  <g>
+    <rect x="290" y="130" width="200" height="100" rx="8" fill="#A3B9A0" opacity="0.15"/>
+    <text x="310" y="160" font-family="system-ui, sans-serif" font-size="13" fill="#355C4C">Completion Rate</text>
+    <text x="310" y="200" font-family="system-ui, sans-serif" font-size="36" font-weight="bold" fill="#355C4C">87%</text>
+  </g>
+
+  <g>
+    <rect x="510" y="130" width="220" height="100" rx="8" fill="#A3B9A0" opacity="0.15"/>
+    <text x="530" y="160" font-family="system-ui, sans-serif" font-size="13" fill="#355C4C">Avg. Time to Goal</text>
+    <text x="530" y="200" font-family="system-ui, sans-serif" font-size="36" font-weight="bold" fill="#355C4C">4.2 mo</text>
+  </g>
+
+  <!-- Line chart -->
+  <rect x="70" y="260" width="660" height="140" rx="8" fill="#F9F9F6" stroke="#DCE6DC" stroke-width="1.5"/>
+  <text x="90" y="285" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#355C4C">Client Progress Over Time</text>
+
+  <!-- Chart grid lines -->
+  <line x1="90" y1="320" x2="710" y2="320" stroke="#DCE6DC" stroke-width="1" opacity="0.5"/>
+  <line x1="90" y1="350" x2="710" y2="350" stroke="#DCE6DC" stroke-width="1" opacity="0.5"/>
+  <line x1="90" y1="380" x2="710" y2="380" stroke="#DCE6DC" stroke-width="1" opacity="0.5"/>
+
+  <!-- Chart line -->
+  <polyline points="90,370 170,360 250,340 330,330 410,345 490,320 570,310 650,305 710,300" fill="none" stroke="#A3B9A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Data points -->
+  <circle cx="90" cy="370" r="5" fill="#A3B9A0"/>
+  <circle cx="170" cy="360" r="5" fill="#A3B9A0"/>
+  <circle cx="250" cy="340" r="5" fill="#A3B9A0"/>
+  <circle cx="330" cy="330" r="5" fill="#A3B9A0"/>
+  <circle cx="410" cy="345" r="5" fill="#A3B9A0"/>
+  <circle cx="490" cy="320" r="5" fill="#A3B9A0"/>
+  <circle cx="570" cy="310" r="5" fill="#A3B9A0"/>
+  <circle cx="650" cy="305" r="5" fill="#A3B9A0"/>
+  <circle cx="710" cy="300" r="5" fill="#A3B9A0"/>
+
+  <!-- Bar chart -->
+  <rect x="70" y="430" width="310" height="110" rx="8" fill="#F9F9F6" stroke="#DCE6DC" stroke-width="1.5"/>
+  <text x="90" y="455" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#355C4C">Goals by Category</text>
+
+  <rect x="100" y="490" width="40" height="30" rx="4" fill="#A3B9A0"/>
+  <text x="120" y="532" font-family="system-ui, sans-serif" font-size="10" fill="#757575" text-anchor="middle">Skills</text>
+
+  <rect x="160" y="470" width="40" height="50" rx="4" fill="#A3B9A0"/>
+  <text x="180" y="532" font-family="system-ui, sans-serif" font-size="10" fill="#757575" text-anchor="middle">Search</text>
+
+  <rect x="220" y="480" width="40" height="40" rx="4" fill="#A3B9A0"/>
+  <text x="240" y="532" font-family="system-ui, sans-serif" font-size="10" fill="#757575" text-anchor="middle">Network</text>
+
+  <rect x="280" y="465" width="40" height="55" rx="4" fill="#A3B9A0"/>
+  <text x="300" y="532" font-family="system-ui, sans-serif" font-size="10" fill="#757575" text-anchor="middle">Interview</text>
+
+  <rect x="340" y="485" width="40" height="35" rx="4" fill="#DCE6DC"/>
+  <text x="360" y="532" font-family="system-ui, sans-serif" font-size="10" fill="#757575" text-anchor="middle">Offer</text>
+
+  <!-- Success rate -->
+  <rect x="400" y="430" width="330" height="110" rx="8" fill="#F9F9F6" stroke="#DCE6DC" stroke-width="1.5"/>
+  <text x="420" y="455" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#355C4C">Client Success Rate</text>
+
+  <!-- Donut chart -->
+  <circle cx="480" cy="495" r="35" fill="none" stroke="#E8E8E8" stroke-width="12"/>
+  <circle cx="480" cy="495" r="35" fill="none" stroke="#A3B9A0" stroke-width="12" stroke-dasharray="192 220" transform="rotate(-90 480 495)"/>
+  <text x="480" y="502" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#355C4C" text-anchor="middle">87%</text>
+
+  <g>
+    <rect x="560" y="470" width="12" height="12" rx="2" fill="#A3B9A0"/>
+    <text x="580" y="480" font-family="system-ui, sans-serif" font-size="12" fill="#355C4C">Goal Achieved</text>
+  </g>
+  <g>
+    <rect x="560" y="495" width="12" height="12" rx="2" fill="#DCE6DC"/>
+    <text x="580" y="505" font-family="system-ui, sans-serif" font-size="12" fill="#355C4C">In Progress</text>
+  </g>
+  <g>
+    <rect x="560" y="520" width="12" height="12" rx="2" fill="#E8E8E8"/>
+    <text x="580" y="530" font-family="system-ui, sans-serif" font-size="12" fill="#355C4C">Not Started</text>
+  </g>
+</svg>
