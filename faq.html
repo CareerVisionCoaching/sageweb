@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Meta Tags -->
+  <title>FAQ - Questions Coaches Actually Ask | Sage.coach</title>
+  <meta name="description" content="Get answers to the most common questions coaches have about Journey OS. Learn how it adapts to your coaching style and helps you scale your practice.">
+  <meta name="keywords" content="coaching software FAQ, journey os questions, coach tools help, coaching practice management">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FAQ - Questions Coaches Actually Ask | Sage.coach">
+  <meta property="og:description" content="Get answers to common questions about Journey OS for coaches.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sage.coach/faq.html">
+  <meta property="og:image" content="https://sage.coach/images/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FAQ - Questions Coaches Actually Ask">
+  <meta name="twitter:description" content="Get answers to common questions about Journey OS for coaches.">
+  <meta name="twitter:image" content="https://sage.coach/images/og-image.jpg">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sage.coach/faq.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/components.css">
+
+  <!-- FAQ-specific styles -->
+  <style>
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-medium);
+      margin-bottom: var(--spacing-xs);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .faq-item:hover {
+      border-color: var(--color-sage);
+      box-shadow: 0 2px 8px rgba(163, 185, 160, 0.15);
+    }
+
+    .faq-item details {
+      cursor: pointer;
+    }
+
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--spacing-sm) var(--spacing-md);
+      font-size: var(--font-size-body-large);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-deep-forest);
+      list-style: none;
+      user-select: none;
+      position: relative;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      margin-left: var(--spacing-xs);
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-icon::before,
+    .faq-icon::after {
+      content: '';
+      position: absolute;
+      background: var(--color-deep-forest);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-icon::before {
+      width: 16px;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .faq-icon::after {
+      width: 2px;
+      height: 16px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .faq-item details[open] .faq-icon::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+      opacity: 0;
+    }
+
+    .faq-item details[open] .faq-icon::before {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 var(--spacing-md) var(--spacing-sm) var(--spacing-md);
+      color: var(--color-gray-700);
+      font-size: var(--font-size-body-regular);
+      line-height: var(--line-height-body-regular);
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .faq-cta {
+      text-align: center;
+      padding: var(--spacing-md);
+      background: var(--color-accent-light);
+      border-radius: var(--radius-medium);
+      margin-top: var(--spacing-lg);
+    }
+
+    .faq-cta p {
+      margin-bottom: var(--spacing-xs);
+      color: var(--color-gray-700);
+    }
+
+    .faq-cta .cta-group {
+      justify-content: center;
+    }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+</head>
+<body>
+  <!-- Skip to Main Content (Accessibility) -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==========================================
+       HEADER / NAVIGATION
+       ========================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="header-logo" aria-label="Sage.coach home">
+        <img src="/images/logo-full.svg" height="32" alt="Sage.coach" onerror="this.src='/images/logo-icon.png'; this.onerror=null;">
+      </a>
+
+      <nav class="header-nav" aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/how-it-works.html" class="nav-link">How It Works</a></li>
+          <li><a href="/roadmap.html" class="nav-link">Roadmap</a></li>
+          <li><a href="/testimonials.html" class="nav-link">Testimonials</a></li>
+          <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="/about.html" class="nav-link">About</a></li>
+        </ul>
+
+        <a href="https://app.sage.coach/signup" class="btn btn-primary" data-analytics="cta_header_trial">
+          Try It Free for 14 Days
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MAIN CONTENT
+       ========================================== -->
+  <main id="main-content">
+
+    <!-- ==========================================
+         FAQ HERO SECTION
+         ========================================== -->
+    <section class="bg-soft-ivory section-lg" aria-labelledby="faq-heading">
+      <div class="container text-center">
+        <h1 id="faq-heading">Questions Coaches Actually Ask</h1>
+        <p class="text-large" style="max-width: 640px; margin: var(--spacing-xs) auto var(--spacing-md);">
+          Can't find your answer? <a href="mailto:hello@sage.coach" style="color: var(--color-deep-forest); text-decoration: underline;">Email us</a> or <a href="/contact.html" style="color: var(--color-deep-forest); text-decoration: underline;">book a 15-minute walkthrough</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FAQ ITEMS
+         ========================================== -->
+    <section class="bg-white section-lg">
+      <div class="container">
+        <div class="faq-container">
+
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <details>
+              <summary>
+                Is this for me or for my clients?
+                <div class="faq-icon"></div>
+              </summary>
+              <div class="faq-answer">
+                <p><strong>You.</strong> This is infrastructure for your coaching practice. Your clients see their roadmap and progress, but Journey OS is built to solve YOUR operational chaos - scattered notes, forgotten follow-ups, administrative overhead.</p>
+              </div>
+            </details>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <details>
+              <summary>
+                Will this make my coaching feel robotic or impersonal?
+                <div class="faq-icon"></div>
+              </summary>
+              <div class="faq-answer">
+                <p><strong>No.</strong> It makes your coaching more consistent and effective. The frameworks give you structure so you can focus on the human part. Think of it like a pilot's checklist - it doesn't make flying impersonal, it makes sure nothing critical gets missed.</p>
+              </div>
+            </details>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <details>
+              <summary>
+                What if my process is different from your roadmap stages?
+                <div class="faq-icon"></div>
+              </summary>
+              <div class="faq-answer">
+                <p>The four stages (Discovery, Strategy, Execution, Close) are high-level containers. You customize the milestones and tasks inside each stage to match your approach. The structure is there to keep you organized, not to dictate your methodology.</p>
+              </div>
+            </details>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <details>
+              <summary>
+                How much time does setup take?
+                <div class="faq-icon"></div>
+              </summary>
+              <div class="faq-answer">
+                <p>First client roadmap takes maybe 30-45 minutes to customize from templates. After that, each new client is 10-15 minutes because you're reusing what works. Compare that to your current "start from scratch every time" approach.</p>
+              </div>
+            </details>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item">
+            <details>
+              <summary>
+                What happens to my data if I cancel?
+                <div class="faq-icon"></div>
+              </summary>
+              <div class="faq-answer">
+                <p>You export everything - all notes, roadmaps, client data. It's yours. We don't hold it hostage.</p>
+              </div>
+            </details>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="faq-item">
+            <details>
+              <summary>
+                Is client data secure?
+                <div class="faq-icon"></div>
+              </summary>
+              <div class="faq-answer">
+                <p><strong>Yes.</strong> SOC 2 compliant, encrypted at rest and in transit, regular security audits. We take this seriously because your client relationships depend on it.</p>
+              </div>
+            </details>
+          </div>
+
+          <!-- FAQ Item 7 -->
+          <div class="faq-item">
+            <details>
+              <summary>
+                Can I try it with one client before committing?
+                <div class="faq-icon"></div>
+              </summary>
+              <div class="faq-answer">
+                <p>That's what the 14-day trial is for. Bring in one or two clients, see if it makes your life easier. If it doesn't, you don't pay.</p>
+              </div>
+            </details>
+          </div>
+
+          <!-- FAQ Item 8 -->
+          <div class="faq-item">
+            <details>
+              <summary>
+                Do I need to change how I coach?
+                <div class="faq-icon"></div>
+              </summary>
+              <div class="faq-answer">
+                <p><strong>No.</strong> Journey OS adapts to your style, not the other way around. If you already use certain frameworks or exercises, drop them into the system. If you don't, we have templates to start with.</p>
+              </div>
+            </details>
+          </div>
+
+          <!-- CTA Box -->
+          <div class="faq-cta">
+            <h3 style="margin-bottom: var(--spacing-xs);">Still have questions?</h3>
+            <p class="text-large">Try it risk-free for 14 days and see if Journey OS fits your practice.</p>
+            <div class="cta-group">
+              <a href="https://app.sage.coach/signup" class="btn btn-primary btn-large" data-analytics="cta_faq_trial">
+                Start Your Free Trial
+              </a>
+              <button class="btn btn-secondary btn-large" id="faqTalkToCoach" data-analytics="cta_faq_talk">
+                Talk to a Coach
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Column 1: Brand -->
+        <div class="footer-column">
+          <div class="header-logo" style="margin-bottom: var(--spacing-2xs); color: var(--color-white);">
+            <img src="/images/logo-full.svg" height="32" alt="Sage.coach" style="filter: brightness(1.2);" onerror="this.src='/images/logo-icon.png'; this.onerror=null;">
+          </div>
+          <p class="text-small" style="color: rgba(255, 255, 255, 0.8);">
+            The operating system for career coaching.
+          </p>
+        </div>
+
+        <!-- Column 2: Product -->
+        <div class="footer-column">
+          <h5>Product</h5>
+          <ul class="footer-links">
+            <li><a href="/how-it-works.html" class="footer-link">How It Works</a></li>
+            <li><a href="/roadmap.html" class="footer-link">Roadmap</a></li>
+            <li><a href="/testimonials.html" class="footer-link">Testimonials</a></li>
+            <li><a href="/pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="/about.html" class="footer-link">About</a></li>
+            <li><a href="/faq.html" class="footer-link">FAQ</a></li>
+            <li><a href="/blog.html" class="footer-link">Blog</a></li>
+            <li><a href="/contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div class="footer-column">
+          <h5>Legal</h5>
+          <ul class="footer-links">
+            <li><a href="/terms.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/cookies.html" class="footer-link">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Sage.coach. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       DEMO BOOKING MODAL
+       ========================================== -->
+  <div class="modal" id="demoModal" role="dialog" aria-labelledby="demoModalTitle" aria-modal="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="demoModalTitle">Talk to a Coach Who Uses Journey OS</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="calEmbed" style="min-height: 600px;">
+          <iframe
+            src="https://cal.com/joshbob?embed=true"
+            width="100%"
+            height="600"
+            frameborder="0"
+            title="Book a walkthrough with Sage.coach">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       JAVASCRIPT
+       ========================================== -->
+  <script src="/js/main.js"></script>
+</body>
+</html>
