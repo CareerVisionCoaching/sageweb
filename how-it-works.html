@@ -1,381 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>How It Works - Sage.coach | CoachOS In Action</title>
-  <meta name="description" content="See how CoachOS provides repeatable roadmaps, unified workspace, and AI assistance to help career coaches scale their practice without burning out.">
-
-  <link rel="canonical" href="https://sage.coach/how-it-works">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/global.css">
-  <link rel="stylesheet" href="/css/components.css">
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - Sage.coach</title>
+    <meta name="description" content="Three things you do with every client. Sage makes each one actually manageable. Plan roadmaps, execute sessions, and reflect on your practice.">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a href="#main-content" class="skip-to-main">Skip to main content</a>
-  <div class="scroll-progress" id="scrollProgress"></div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M16 2L4 8v12c0 7.3 5.3 12.6 12 14 6.7-1.4 12-6.7 12-14V8L16 2z"/>
+                </svg>
+                Sage.coach
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="how-it-works.html" class="active">How It Works</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="/" class="header-logo">
-        <img src="/images/logo-full.svg" height="32" alt="Sage.coach" onerror="this.src='/images/logo-icon.png'; this.onerror=null;">
-      </a>
-
-      <nav class="header-nav">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="/how-it-works.html" class="nav-link">How It Works</a></li>
-          <li><a href="/roadmap.html" class="nav-link">Roadmap</a></li>
-          <li><a href="/testimonials.html" class="nav-link">Testimonials</a></li>
-          <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
-          <li><a href="/about.html" class="nav-link">About</a></li>
-        </ul>
-
-        <a href="https://app.sage.coach/signup" class="btn btn-primary" data-analytics="cta_header_trial">
-          Try It Free for 14 Days
-        </a>
-
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main-content">
-    <!-- Hero -->
-    <section class="bg-soft-ivory section-lg">
-      <div class="container text-center" style="max-width: 840px;">
-        <h1>How CoachOS Works (Concrete, Not Conceptual)</h1>
-        <p class="text-large" style="max-width: 680px; margin: var(--spacing-xs) auto 0;">
-          Three things you do with every client. Sage makes each one actually manageable.
-        </p>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container text-center">
+            <h1>How CoachOS Works (Concrete, Not Conceptual)</h1>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.125rem;">Three things you do with every client. Sage makes each one actually manageable.</p>
+        </div>
     </section>
 
     <!-- Section 1: Plan -->
-    <section class="bg-white section-lg">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); align-items: center;">
-          <div>
-            <h2>Section 1: Plan</h2>
-            <h3>Build Roadmaps That Adapt</h3>
-            <p style="margin-bottom: var(--spacing-sm);">
-              Every client gets a roadmap through four proven CoachOS stages. But here's what makes it work:
-            </p>
-
-            <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-sm);">
-              <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs); margin-bottom: var(--spacing-2xs);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="12" r="10" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M8 12L11 15L16 9" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Pre-built milestone templates you customize per client</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs); margin-bottom: var(--spacing-2xs);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="12" r="10" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M8 12L11 15L16 9" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Progress visibility for both of you (they see percentages, you see completion tracking)</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs); margin-bottom: var(--spacing-2xs);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="12" r="10" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M8 12L11 15L16 9" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Automatic flagging when someone stalls at a milestone</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="12" r="10" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M8 12L11 15L16 9" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Task dependencies that keep work sequenced logically</span>
-              </li>
-            </ul>
-
-            <div class="card bg-accent-light" style="padding: var(--spacing-sm);">
-              <p style="font-weight: var(--font-weight-semibold); color: var(--color-deep-forest); margin: 0;">
-                What this solves: No more "what should we work on next?" moments. The roadmap tells you.
-              </p>
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4F7052, #ACCAAF); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
+                            <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                            </svg>
+                        </div>
+                        <h2 style="margin: 0;">Plan</h2>
+                    </div>
+                    <h3 class="mb-md" style="color: var(--dark-sage);">Build Roadmaps That Adapt</h3>
+                    <div class="card mb-md">
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-medium);">
+                            <li style="margin-bottom: 0.75rem;">Pre-built milestone templates you customize per client</li>
+                            <li style="margin-bottom: 0.75rem;">Progress visibility for both of you (they see percentages, you see completion tracking)</li>
+                            <li style="margin-bottom: 0.75rem;">Automatic flagging when someone stalls at a milestone</li>
+                            <li>Task dependencies that keep work sequenced logically</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="background: var(--accent-light); border-left: 4px solid var(--dark-sage);">
+                        <p style="margin: 0; font-weight: 600; color: var(--dark-sage);">What this solves: No more "what should we work on next?" moments. The roadmap tells you.</p>
+                    </div>
+                </div>
+                <div>
+                    <svg width="100%" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="400" height="400" fill="#f8fafc"/>
+                        <circle cx="200" cy="80" r="50" fill="#4F7052" opacity="0.1"/>
+                        <path d="M200 50 L200 110 M170 80 L230 80" stroke="#4F7052" stroke-width="5" stroke-linecap="round"/>
+                        <rect x="50" y="160" width="300" height="50" rx="8" fill="#ffffff" stroke="#4F7052" stroke-width="2"/>
+                        <text x="200" y="190" text-anchor="middle" fill="#4F7052" font-size="16" font-weight="600">Discovery Stage</text>
+                        <rect x="50" y="220" width="300" height="50" rx="8" fill="#ffffff" stroke="#ACCAAF" stroke-width="2"/>
+                        <text x="200" y="250" text-anchor="middle" fill="#ACCAAF" font-size="16" font-weight="600">Strategy Stage</text>
+                        <rect x="50" y="280" width="300" height="50" rx="8" fill="#ffffff" stroke="#80ACC2" stroke-width="2"/>
+                        <text x="200" y="310" text-anchor="middle" fill="#80ACC2" font-size="16" font-weight="600">Execution Stage</text>
+                        <text x="200" y="370" text-anchor="middle" fill="#475569" font-size="14" font-weight="600">Repeatable Roadmap Structure</text>
+                    </svg>
+                </div>
             </div>
-          </div>
-
-          <div style="text-align: center;">
-            <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="50" y="50" width="200" height="200" rx="10" stroke="#A3B9A0" stroke-width="3"/>
-              <line x1="50" y1="90" x2="250" y2="90" stroke="#A3B9A0" stroke-width="2"/>
-              <text x="150" y="75" text-anchor="middle" fill="#355C4C" font-size="14" font-weight="bold">Roadmap</text>
-
-              <!-- Milestones -->
-              <rect x="70" y="110" width="80" height="30" rx="5" fill="#A3B9A0" opacity="0.8"/>
-              <text x="110" y="130" text-anchor="middle" fill="white" font-size="12">Discovery</text>
-
-              <rect x="70" y="150" width="80" height="30" rx="5" fill="#A3B9A0" opacity="0.6"/>
-              <text x="110" y="170" text-anchor="middle" fill="white" font-size="12">Strategy</text>
-
-              <rect x="70" y="190" width="80" height="30" rx="5" fill="#DCE6DC"/>
-              <text x="110" y="210" text-anchor="middle" fill="#355C4C" font-size="12">Execution</text>
-
-              <!-- Progress indicator -->
-              <circle cx="200" cy="125" r="25" stroke="#355C4C" stroke-width="3"/>
-              <text x="200" y="132" text-anchor="middle" fill="#355C4C" font-size="16" font-weight="bold">60%</text>
-            </svg>
-            <p class="text-small" style="margin-top: var(--spacing-xs); color: var(--color-gray-600);">
-              Planning and roadmap creation icon
-            </p>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Section 2: Execute -->
-    <section class="bg-soft-ivory section-lg">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); align-items: center;">
-          <div style="text-align: center; order: 1;">
-            <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="150" cy="150" r="100" stroke="#A3B9A0" stroke-width="3"/>
-              <circle cx="150" cy="150" r="70" stroke="#355C4C" stroke-width="2"/>
-
-              <!-- Document icons -->
-              <rect x="120" y="100" width="30" height="40" rx="3" fill="#DCE6DC" stroke="#355C4C" stroke-width="1"/>
-              <line x1="125" y1="110" x2="145" y2="110" stroke="#355C4C" stroke-width="1"/>
-              <line x1="125" y1="120" x2="145" y2="120" stroke="#355C4C" stroke-width="1"/>
-              <line x1="125" y1="130" x2="145" y2="130" stroke="#355C4C" stroke-width="1"/>
-
-              <!-- Checkmarks -->
-              <path d="M170 120 L175 125 L185 110" stroke="#A3B9A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M170 170 L175 175 L185 160" stroke="#A3B9A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <p class="text-small" style="margin-top: var(--spacing-xs); color: var(--color-gray-600);">
-              Session management and execution icon
-            </p>
-          </div>
-
-          <div style="order: 2;">
-            <h2>Execute: Session Management That Doesn't Suck</h2>
-
-            <div style="margin-bottom: var(--spacing-sm);">
-              <h4 style="margin-bottom: var(--spacing-3xs);">Before each session, CoachOS pulls up:</h4>
-              <ul style="list-style: none; padding: 0;">
-                <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs); margin-bottom: var(--spacing-3xs);">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                    <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                    <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                  <span>Previous session notes with action items</span>
-                </li>
-                <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs); margin-bottom: var(--spacing-3xs);">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                    <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                    <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                  <span>Outstanding milestones and overdue tasks</span>
-                </li>
-                <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs); margin-bottom: var(--spacing-3xs);">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                    <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                    <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                  <span>Documents they've shared or you've assigned</span>
-                </li>
-                <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs);">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                    <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                    <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                  <span>AI-generated prep brief based on where they are</span>
-                </li>
-              </ul>
+    <section class="section section-alt">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                <div style="order: 2;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #ACCAAF, #80ACC2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
+                            <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                            </svg>
+                        </div>
+                        <h2 style="margin: 0;">Execute</h2>
+                    </div>
+                    <h3 class="mb-md" style="color: var(--dark-sage);">Session Management That Doesn't Suck</h3>
+                    <div class="card mb-sm">
+                        <h4 style="margin-bottom: 0.75rem;">Before each session, Sage pulls up:</h4>
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-medium);">
+                            <li style="margin-bottom: 0.5rem;">Previous session notes with action items</li>
+                            <li style="margin-bottom: 0.5rem;">Outstanding milestones and overdue tasks</li>
+                            <li style="margin-bottom: 0.5rem;">Documents they've shared or you've assigned</li>
+                            <li>AI-generated prep brief based on where they are</li>
+                        </ul>
+                    </div>
+                    <div class="card mb-md">
+                        <p class="mb-sm"><strong>During the session</strong>, you coach. Take notes if you want, or let AI transcribe.</p>
+                        <p style="margin: 0;"><strong>After</strong>, AI summarizes key points and suggests next milestones. You review, adjust, done.</p>
+                    </div>
+                    <div class="card" style="background: var(--accent-light); border-left: 4px solid var(--dark-sage);">
+                        <p style="margin: 0; font-weight: 600; color: var(--dark-sage);">What this solves: No more scrambling at 9:50 for a 10:00 session. No more "wait, where were we?"</p>
+                    </div>
+                </div>
+                <div style="order: 1;">
+                    <svg width="100%" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="400" height="400" fill="#f8fafc"/>
+                        <rect x="50" y="50" width="300" height="300" rx="12" fill="#ffffff" stroke="#ACCAAF" stroke-width="3"/>
+                        <rect x="70" y="70" width="260" height="40" rx="6" fill="#f1f5f9"/>
+                        <circle cx="90" cy="90" r="6" fill="#10b981"/>
+                        <text x="110" y="95" fill="#475569" font-size="14">Session notes loaded</text>
+                        <rect x="70" y="120" width="260" height="40" rx="6" fill="#f1f5f9"/>
+                        <circle cx="90" cy="140" r="6" fill="#10b981"/>
+                        <text x="110" y="145" fill="#475569" font-size="14">Overdue tasks flagged</text>
+                        <rect x="70" y="170" width="260" height="40" rx="6" fill="#f1f5f9"/>
+                        <circle cx="90" cy="190" r="6" fill="#10b981"/>
+                        <text x="110" y="195" fill="#475569" font-size="14">AI prep brief ready</text>
+                        <rect x="70" y="230" width="260" height="100" rx="6" fill="#e0f2fe"/>
+                        <text x="200" y="255" text-anchor="middle" fill="#0369a1" font-size="14" font-weight="600">Active Session</text>
+                        <text x="200" y="275" text-anchor="middle" fill="#0369a1" font-size="12">Coach + Client</text>
+                        <text x="200" y="310" text-anchor="middle" fill="#0369a1" font-size="12">AI transcription running</text>
+                        <text x="200" y="375" text-anchor="middle" fill="#475569" font-size="14" font-weight="600">Session Workspace</text>
+                    </svg>
+                </div>
             </div>
-
-            <p style="margin-bottom: var(--spacing-xs);">
-              During the session, you coach. Take notes if you want, or let AI transcribe.
-            </p>
-            <p style="margin-bottom: var(--spacing-sm);">
-              After, AI summarizes key points and suggests next milestones. You review, adjust, done.
-            </p>
-
-            <div class="card bg-accent-light" style="padding: var(--spacing-sm);">
-              <p style="font-weight: var(--font-weight-semibold); color: var(--color-deep-forest); margin: 0;">
-                What this solves: No more scrambling at 9:50 for a 10:00 session. No more "wait, where were we?"
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Section 3: Reflect -->
-    <section class="bg-white section-lg">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); align-items: center;">
-          <div>
-            <h2>Reflect: Know What's Working (And What Isn't)</h2>
-            <p style="margin-bottom: var(--spacing-sm);">
-              Dashboard shows you:
-            </p>
-
-            <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-sm);">
-              <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs); margin-bottom: var(--spacing-2xs);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="12" r="10" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M8 12L11 15L16 9" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Which clients are on track vs. stalled</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs); margin-bottom: var(--spacing-2xs);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="12" r="10" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M8 12L11 15L16 9" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Average time in each stage across your practice</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs); margin-bottom: var(--spacing-2xs);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="12" r="10" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M8 12L11 15L16 9" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Which milestones consistently cause friction</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--spacing-2xs);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="12" r="10" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M8 12L11 15L16 9" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Client engagement metrics</span>
-              </li>
-            </ul>
-
-            <p style="margin-bottom: var(--spacing-sm);">
-              Use this to refine your approach. Figure out what works. Stop guessing.
-            </p>
-
-            <div class="card bg-accent-light" style="padding: var(--spacing-sm);">
-              <p style="font-weight: var(--font-weight-semibold); color: var(--color-deep-forest); margin: 0;">
-                What this solves: You finally have data on your practice, not just anecdotes.
-              </p>
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #80ACC2, #10b981); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
+                            <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+                            </svg>
+                        </div>
+                        <h2 style="margin: 0;">Reflect</h2>
+                    </div>
+                    <h3 class="mb-md" style="color: var(--dark-sage);">Know What's Working (And What Isn't)</h3>
+                    <div class="card mb-md">
+                        <h4 style="margin-bottom: 0.75rem;">Sage dashboard shows you:</h4>
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-medium);">
+                            <li style="margin-bottom: 0.75rem;">Which clients are on track vs. stalled</li>
+                            <li style="margin-bottom: 0.75rem;">Average time in each stage across your practice</li>
+                            <li style="margin-bottom: 0.75rem;">Which milestones consistently cause friction</li>
+                            <li>Client engagement metrics</li>
+                        </ul>
+                    </div>
+                    <p class="mb-md">Use this to refine your approach. Figure out what works. Stop guessing.</p>
+                    <div class="card" style="background: var(--accent-light); border-left: 4px solid var(--dark-sage);">
+                        <p style="margin: 0; font-weight: 600; color: var(--dark-sage);">What this solves: You finally have data on your practice, not just anecdotes.</p>
+                    </div>
+                </div>
+                <div>
+                    <svg width="100%" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="400" height="400" fill="#f8fafc"/>
+                        <rect x="50" y="50" width="300" height="300" rx="12" fill="#ffffff" stroke="#80ACC2" stroke-width="3"/>
+                        <text x="200" y="85" text-anchor="middle" fill="#475569" font-size="16" font-weight="600">Practice Analytics</text>
+                        <rect x="80" y="260" width="40" height="60" fill="#4F7052" opacity="0.6"/>
+                        <rect x="135" y="220" width="40" height="100" fill="#ACCAAF" opacity="0.6"/>
+                        <rect x="190" y="190" width="40" height="130" fill="#80ACC2" opacity="0.6"/>
+                        <rect x="245" y="160" width="40" height="160" fill="#10b981" opacity="0.6"/>
+                        <text x="100" y="340" text-anchor="middle" fill="#64748b" font-size="11">Week 1</text>
+                        <text x="155" y="340" text-anchor="middle" fill="#64748b" font-size="11">Week 2</text>
+                        <text x="210" y="340" text-anchor="middle" fill="#64748b" font-size="11">Week 3</text>
+                        <text x="265" y="340" text-anchor="middle" fill="#64748b" font-size="11">Week 4</text>
+                        <circle cx="100" cy="120" r="8" fill="#10b981"/>
+                        <text x="120" y="125" fill="#475569" font-size="12">5 clients on track</text>
+                        <circle cx="100" cy="145" r="8" fill="#f59e0b"/>
+                        <text x="120" y="150" fill="#475569" font-size="12">2 clients stalled</text>
+                        <text x="200" y="375" text-anchor="middle" fill="#475569" font-size="14" font-weight="600">Practice Dashboard</text>
+                    </svg>
+                </div>
             </div>
-          </div>
-
-          <div style="text-align: center;">
-            <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="40" y="40" width="220" height="220" rx="10" stroke="#A3B9A0" stroke-width="3"/>
-
-              <!-- Bar chart -->
-              <rect x="70" y="180" width="40" height="60" fill="#A3B9A0" opacity="0.7"/>
-              <rect x="130" y="140" width="40" height="100" fill="#A3B9A0" opacity="0.9"/>
-              <rect x="190" y="160" width="40" height="80" fill="#A3B9A0" opacity="0.8"/>
-
-              <!-- Line graph -->
-              <path d="M70 120 L130 90 L190 100 L230 70" stroke="#355C4C" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="70" cy="120" r="5" fill="#355C4C"/>
-              <circle cx="130" cy="90" r="5" fill="#355C4C"/>
-              <circle cx="190" cy="100" r="5" fill="#355C4C"/>
-              <circle cx="230" cy="70" r="5" fill="#355C4C"/>
-            </svg>
-            <p class="text-small" style="margin-top: var(--spacing-xs); color: var(--color-gray-600);">
-              Analytics and reflection icon
-            </p>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="bg-deep-forest section-lg" style="color: var(--color-white);">
-      <div class="container text-center" style="max-width: 640px;">
-        <h2 style="color: var(--color-white);">See It In Action</h2>
-        <p class="text-large" style="color: rgba(255, 255, 255, 0.9); margin-bottom: var(--spacing-md);">
-          Try CoachOS free for 14 days and experience what systematized coaching feels like.
-        </p>
-
-        <div class="cta-group" style="justify-content: center; margin-bottom: var(--spacing-2xs);">
-          <a href="https://app.sage.coach/signup" class="btn btn-white btn-large" data-analytics="cta_howitworks_trial">
-            Try It Free for 14 Days
-          </a>
-          <a href="/contact.html" class="btn btn-secondary btn-large" style="border-color: var(--color-white); color: var(--color-white);" data-analytics="cta_howitworks_contact">
-            Talk to a Coach Using It
-          </a>
+    <section class="section section-alt">
+        <div class="container text-center">
+            <h2 class="mb-md">See It In Action</h2>
+            <p class="mb-lg" style="font-size: 1.125rem; max-width: 600px; margin: 0 auto 2rem;">Watch how CoachOS turns coaching chaos into systematic practice management.</p>
+            <div class="btn-group">
+                <a href="contact.html" class="btn btn-primary">Watch 3-Min Demo</a>
+                <a href="contact.html" class="btn btn-outline">Talk to a Coach Using Sage</a>
+            </div>
         </div>
-
-        <p class="text-small" style="color: rgba(255, 255, 255, 0.7);">
-          No credit card required
-        </p>
-      </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <div class="header-logo" style="margin-bottom: var(--spacing-2xs); color: var(--color-white);">
-            <img src="/images/logo-full.svg" height="32" alt="Sage.coach" style="filter: brightness(1.2);" onerror="this.src='/images/logo-icon.png'; this.onerror=null;">
-          </div>
-          <p class="text-small" style="color: rgba(255, 255, 255, 0.8);">
-            The operating system for career coaching.
-          </p>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Sage.coach</h4>
+                <p>CoachOS is the operating system for career coaching. Sage is the platform built on CoachOS - giving your practice repeatability without rigidity.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Facebook">f</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: hello@sage.coach</p>
+                <p>Support: support@sage.coach</p>
+            </div>
         </div>
-
-        <div class="footer-column">
-          <h5>Product</h5>
-          <ul class="footer-links">
-            <li><a href="/how-it-works.html" class="footer-link">How It Works</a></li>
-            <li><a href="/roadmap.html" class="footer-link">Roadmap</a></li>
-            <li><a href="/testimonials.html" class="footer-link">Testimonials</a></li>
-            <li><a href="/pricing.html" class="footer-link">Pricing</a></li>
-          </ul>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sage.coach. All rights reserved.</p>
+            </div>
         </div>
-
-        <div class="footer-column">
-          <h5>Company</h5>
-          <ul class="footer-links">
-            <li><a href="/about.html" class="footer-link">About</a></li>
-            <li><a href="/faq.html" class="footer-link">FAQ</a></li>
-            <li><a href="/blog.html" class="footer-link">Blog</a></li>
-            <li><a href="/contact.html" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h5>Legal</h5>
-          <ul class="footer-links">
-            <li><a href="/terms.html" class="footer-link">Terms of Service</a></li>
-            <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
-            <li><a href="/cookies.html" class="footer-link">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2025 Sage.coach. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/js/main.js"></script>
+    </footer>
 </body>
 </html>
