@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Sage.coach</title>
-    <meta name="description" content="Get in touch with Sage.coach. Book a free consultation or send us a message. We're here to help you achieve your career goals.">
+    <title>Contact - Sage.coach</title>
+    <meta name="description" content="Book a 15-minute walkthrough with a coach who uses Sage. See if it solves your specific chaos.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -34,104 +34,59 @@
     <!-- Hero Section -->
     <section class="hero" style="padding: 4rem 0;">
         <div class="container text-center">
-            <h1>Get in Touch</h1>
-            <p style="max-width: 700px; margin: 0 auto;">Schedule a free consultation or send us a message. We're here to help you take the next step in your career journey.</p>
-        </div>
-    </section>
-
-    <!-- Contact Options -->
-    <section class="section">
-        <div class="container">
-            <div class="grid grid-3">
-                <div class="card text-center">
-                    <svg width="60" height="60" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin: 0 auto 1rem; color: var(--dark-sage);">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg>
-                    <h4 class="mb-sm">Email Us</h4>
-                    <p style="margin-bottom: 0.5rem; color: var(--text-medium);">For general inquiries:</p>
-                    <a href="mailto:hello@sage.coach" style="color: var(--dark-sage); font-weight: 600; text-decoration: none;">hello@sage.coach</a>
-                    <p style="margin: 1rem 0 0.5rem; color: var(--text-medium);">For support:</p>
-                    <a href="mailto:support@sage.coach" style="color: var(--dark-sage); font-weight: 600; text-decoration: none;">support@sage.coach</a>
-                </div>
-
-                <div class="card text-center">
-                    <svg width="60" height="60" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin: 0 auto 1rem; color: var(--dark-sage);">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                    </svg>
-                    <h4 class="mb-sm">Book a Consult</h4>
-                    <p style="margin-bottom: 1rem; color: var(--text-medium);">Schedule a free 30-minute consultation to discuss your goals.</p>
-                    <a href="#booking-form" class="btn btn-primary" style="font-size: 0.95rem; padding: 0.75rem 1.5rem;">Schedule Now</a>
-                </div>
-
-                <div class="card text-center">
-                    <svg width="60" height="60" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin: 0 auto 1rem; color: var(--dark-sage);">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
-                    </svg>
-                    <h4 class="mb-sm">Live Chat</h4>
-                    <p style="margin-bottom: 1rem; color: var(--text-medium);">Chat with our team Monday-Friday, 9am-6pm PST.</p>
-                    <button class="btn btn-outline" style="font-size: 0.95rem; padding: 0.75rem 1.5rem;" onclick="alert('Chat widget would open here')">Start Chat</button>
-                </div>
-            </div>
+            <h1>Get Started<br/>See If Sage Fits Your Practice</h1>
+            <p style="max-width: 700px; margin: 0 auto;">Book a 15-minute walkthrough with a coach who uses the system. No sales pitch - just honest conversation about whether this solves your specific chaos.</p>
         </div>
     </section>
 
     <!-- Contact Form -->
-    <section id="booking-form" class="section section-alt">
+    <section id="booking-form" class="section">
         <div class="container">
             <div class="text-center mb-lg">
-                <h2>Send Us a Message</h2>
-                <p style="max-width: 700px; margin: 0 auto;">Fill out the form below and we'll get back to you within 24 hours.</p>
+                <h2>Book a Walkthrough</h2>
+                <p style="max-width: 700px; margin: 0 auto;">Fill out the form below and we'll get back to you within 24 hours to schedule.</p>
             </div>
             <div style="max-width: 700px; margin: 0 auto;">
                 <form class="card" onsubmit="event.preventDefault(); alert('Form submission would be processed here. Thank you for your interest!');">
                     <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
                     </div>
 
                     <div class="form-group">
-                        <label for="role">Current Role/Title</label>
-                        <input type="text" id="role" name="role" placeholder="Senior Software Engineer">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="company">Company (Optional)</label>
-                        <input type="text" id="company" name="company" placeholder="Your Company">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inquiry-type">What can we help you with? *</label>
-                        <select id="inquiry-type" name="inquiry-type" required>
+                        <label for="coaching-focus">Coaching focus *</label>
+                        <select id="coaching-focus" name="coaching-focus" required>
                             <option value="">Select an option</option>
-                            <option value="book-consult">Book a Free Consultation</option>
-                            <option value="pricing">Pricing Information</option>
-                            <option value="demo">Request a Demo</option>
-                            <option value="coach-network">Join Coach Network</option>
-                            <option value="support">Technical Support</option>
-                            <option value="partnership">Partnership Inquiry</option>
+                            <option value="career-transitions">Career transitions</option>
+                            <option value="executive-coaching">Executive coaching</option>
+                            <option value="tech-industry">Tech industry</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" required placeholder="Tell us about your career goals or how we can help..."></textarea>
+                        <label for="client-load">Current client load *</label>
+                        <select id="client-load" name="client-load" required>
+                            <option value="">Select an option</option>
+                            <option value="1-5">1-5</option>
+                            <option value="6-10">6-10</option>
+                            <option value="11-20">11-20</option>
+                            <option value="20+">20+</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
-                            <input type="checkbox" required style="width: auto; margin: 0;">
-                            <span style="font-weight: normal;">I agree to receive communications from Sage.coach and understand I can unsubscribe at any time. *</span>
-                        </label>
+                        <label for="pain-point">Biggest operational pain point *</label>
+                        <textarea id="pain-point" name="pain-point" required placeholder="Describe the main operational challenge in your coaching practice..."></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1rem;">
-                        Send Message
+                        Book a Walkthrough
                     </button>
 
                     <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-light); text-align: center;">
@@ -142,88 +97,26 @@
         </div>
     </section>
 
-    <!-- Office Info / Map Section -->
-    <section class="section">
-        <div class="container">
-            <div class="text-center mb-lg">
-                <h2>Our Locations</h2>
-            </div>
-            <div class="grid grid-2">
-                <div class="card">
-                    <h4 class="mb-sm" style="color: var(--dark-sage);">Headquarters</h4>
-                    <p style="margin-bottom: 0.5rem;"><strong>San Francisco, CA</strong></p>
-                    <p style="color: var(--text-medium); margin-bottom: 0.5rem;">123 Market Street, Suite 400</p>
-                    <p style="color: var(--text-medium); margin-bottom: 0.5rem;">San Francisco, CA 94102</p>
-                    <p style="color: var(--text-medium);">Monday - Friday: 9am - 6pm PST</p>
-                </div>
-
-                <div class="card">
-                    <h4 class="mb-sm" style="color: var(--dark-sage);">East Coast Office</h4>
-                    <p style="margin-bottom: 0.5rem;"><strong>New York, NY</strong></p>
-                    <p style="color: var(--text-medium); margin-bottom: 0.5rem;">456 Broadway, 10th Floor</p>
-                    <p style="color: var(--text-medium); margin-bottom: 0.5rem;">New York, NY 10013</p>
-                    <p style="color: var(--text-medium);">Monday - Friday: 9am - 6pm EST</p>
-                </div>
-            </div>
-
-            <!-- Map Placeholder -->
-            <div style="margin-top: 2rem;">
-                <div style="background: var(--bg-light); border: 2px dashed var(--border-color); border-radius: 1rem; padding: 4rem; text-align: center;">
-                    <svg width="100" height="100" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin: 0 auto 1rem; color: var(--text-light);">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
-                    </svg>
-                    <p style="color: var(--text-medium); font-size: 1.125rem;">Interactive map would be displayed here</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Quick Links -->
+    <!-- Alternative Contact -->
     <section class="section section-alt">
-        <div class="container">
-            <div class="text-center mb-lg">
-                <h2>Before You Contact Us</h2>
-                <p style="max-width: 700px; margin: 0 auto;">Check out our FAQ page — you might find the answer you're looking for right away.</p>
-            </div>
-            <div class="grid grid-3">
-                <div class="card">
-                    <h4 style="margin-bottom: 0.75rem;">Getting Started</h4>
-                    <p style="color: var(--text-medium); margin-bottom: 1rem;">Learn how to create your first roadmap, set up your profile, and begin your journey.</p>
-                    <a href="faq.html" style="color: var(--dark-sage); font-weight: 600; text-decoration: none;">View FAQs →</a>
-                </div>
-
-                <div class="card">
-                    <h4 style="margin-bottom: 0.75rem;">Pricing & Plans</h4>
-                    <p style="color: var(--text-medium); margin-bottom: 1rem;">Understand our pricing structure, billing cycles, and plan features.</p>
-                    <a href="pricing.html" style="color: var(--dark-sage); font-weight: 600; text-decoration: none;">View Pricing →</a>
-                </div>
-
-                <div class="card">
-                    <h4 style="margin-bottom: 0.75rem;">Platform Features</h4>
-                    <p style="color: var(--text-medium); margin-bottom: 1rem;">Explore what Sage.coach can do and how it can help you achieve your goals.</p>
-                    <a href="how-it-works.html" style="color: var(--dark-sage); font-weight: 600; text-decoration: none;">Learn More →</a>
-                </div>
+        <div class="container text-center">
+            <h2 class="mb-md">Prefer to Explore on Your Own First?</h2>
+            <div class="btn-group">
+                <a href="pricing.html" class="btn btn-primary">Start Free 14-Day Trial</a>
+                <a href="how-it-works.html" class="btn btn-outline">Watch 3-Min Demo Video</a>
             </div>
         </div>
     </section>
 
-    <!-- Response Time -->
+    <!-- Illustration -->
     <section class="section">
         <div class="container text-center">
-            <h2 class="mb-md">We're Here to Help</h2>
-            <div class="grid grid-3" style="max-width: 800px; margin: 0 auto;">
-                <div>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--dark-sage); margin-bottom: 0.5rem;">24hrs</div>
-                    <p style="color: var(--text-medium);">Average email response time</p>
-                </div>
-                <div>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--dark-sage); margin-bottom: 0.5rem;">2min</div>
-                    <p style="color: var(--text-medium);">Average chat response time</p>
-                </div>
-                <div>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--dark-sage); margin-bottom: 0.5rem;">98%</div>
-                    <p style="color: var(--text-medium);">Customer satisfaction rating</p>
-                </div>
+            <div style="max-width: 400px; margin: 0 auto; background: var(--bg-light); border: 2px dashed var(--border-color); border-radius: 1rem; padding: 3rem;">
+                <p style="color: var(--text-medium); font-size: 1rem; margin: 0;">
+                    <strong>Abstract illustration of consultation</strong><br/>
+                    <em style="font-size: 0.9rem;">Size: 400×200 px</em><br/>
+                    <em style="font-size: 0.9rem;">Alt: "Abstract illustration representing coaching consultation"</em>
+                </p>
             </div>
         </div>
     </section>
@@ -233,31 +126,31 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>About Sage.coach</h4>
-                <p>Empowering mid-career tech professionals to achieve their career goals through structured coaching and AI-powered tools.</p>
+                <p>CoachOS is the operating system for career coaching. Sage is the platform built on CoachOS.</p>
                 <div class="social-links">
                     <a href="#" aria-label="LinkedIn">in</a>
                     <a href="#" aria-label="Twitter">𝕏</a>
-                    <a href="#" aria-label="Facebook">f</a>
                 </div>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
-                <a href="about.html">About Us</a>
                 <a href="how-it-works.html">How It Works</a>
                 <a href="pricing.html">Pricing</a>
-                <a href="blog.html">Blog</a>
+                <a href="blog.html">Resources</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div class="footer-section">
-                <h4>Support</h4>
+                <h4>Product</h4>
+                <a href="roadmap.html">Roadmaps</a>
                 <a href="faq.html">FAQ</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="#">Privacy Policy</a>
+                <a href="#">Security</a>
                 <a href="#">Terms of Service</a>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: hello@sage.coach</p>
-                <p>Support: support@sage.coach</p>
+                <h4>Company</h4>
+                <a href="about.html">About</a>
+                <a href="#">Privacy Policy</a>
+                <p style="margin-top: 1rem;">Email: hello@sage.coach</p>
             </div>
         </div>
         <div class="container">
