@@ -1,422 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Contact - Sage.coach | Get in Touch</title>
-  <meta name="description" content="Have questions? Get in touch with the Sage.coach team. We respond within 24 hours.">
-
-  <link rel="canonical" href="https://sage.coach/contact">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/global.css">
-  <link rel="stylesheet" href="/css/components.css">
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sage.coach</title>
+    <meta name="description" content="Book a 15-minute walkthrough with a coach who uses Sage. See if it solves your specific chaos.">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a href="#main-content" class="skip-to-main">Skip to main content</a>
-  <div class="scroll-progress" id="scrollProgress"></div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M16 2L4 8v12c0 7.3 5.3 12.6 12 14 6.7-1.4 12-6.7 12-14V8L16 2z"/>
+                </svg>
+                Sage.coach
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="/" class="header-logo">
-        <img src="/images/logo-icon.png" width="32" height="32" alt="" aria-hidden="true" onerror="this.style.display='none'">
-        <span>sage.coach</span>
-      </a>
-
-      <nav class="header-nav">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="/features.html" class="nav-link">Features</a></li>
-          <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
-          <li><a href="/about.html" class="nav-link">About</a></li>
-          <li><a href="/contact.html" class="nav-link">Contact</a></li>
-        </ul>
-
-        <a href="https://app.sage.coach/signup" class="btn btn-primary" data-analytics="cta_header_trial">
-          Start Free Trial
-        </a>
-
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main-content">
-    <!-- Hero -->
-    <section class="bg-soft-ivory section">
-      <div class="container text-center" style="max-width: 640px;">
-        <h1>Get in Touch</h1>
-        <p class="text-large">
-          Have questions? We're here to help. Send us a message and we'll respond within 24 hours.
-        </p>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container text-center">
+            <h1>Get Started<br/>See If Sage Fits Your Practice</h1>
+            <p style="max-width: 700px; margin: 0 auto;">Book a 15-minute walkthrough with a coach who uses the system. No sales pitch - just honest conversation about whether this solves your specific chaos.</p>
+        </div>
     </section>
 
-    <!-- Contact Content -->
-    <section class="bg-white section-lg">
-      <div class="container" style="max-width: 1080px;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg);">
+    <!-- Contact Form -->
+    <section id="booking-form" class="section">
+        <div class="container">
+            <div class="text-center mb-lg">
+                <h2>Book a Walkthrough</h2>
+                <p style="max-width: 700px; margin: 0 auto;">Fill out the form below and we'll get back to you within 24 hours to schedule.</p>
+            </div>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <form class="card" onsubmit="event.preventDefault(); alert('Form submission would be processed here. Thank you for your interest!');">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
 
-          <!-- Contact Form -->
-          <div>
-            <h2 style="margin-bottom: var(--spacing-xs);">Send Us a Message</h2>
-            <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-sm);">
-              Fill out the form below and we'll get back to you as soon as possible.
-            </p>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
 
-            <form id="contactForm" novalidate>
-              <div class="form-group">
-                <label for="name" class="form-label">
-                  Name <span class="required">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="form-input"
-                  placeholder="Your full name"
-                  required
-                  aria-required="true"
-                >
-                <span class="form-helper error" id="nameError" style="display: none;"></span>
-              </div>
+                    <div class="form-group">
+                        <label for="coaching-focus">Coaching focus *</label>
+                        <select id="coaching-focus" name="coaching-focus" required>
+                            <option value="">Select an option</option>
+                            <option value="career-transitions">Career transitions</option>
+                            <option value="executive-coaching">Executive coaching</option>
+                            <option value="tech-industry">Tech industry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
 
-              <div class="form-group">
-                <label for="email" class="form-label">
-                  Email Address <span class="required">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="form-input"
-                  placeholder="you@example.com"
-                  required
-                  aria-required="true"
-                >
-                <span class="form-helper error" id="emailError" style="display: none;"></span>
-              </div>
+                    <div class="form-group">
+                        <label for="client-load">Current client load *</label>
+                        <select id="client-load" name="client-load" required>
+                            <option value="">Select an option</option>
+                            <option value="1-5">1-5</option>
+                            <option value="6-10">6-10</option>
+                            <option value="11-20">11-20</option>
+                            <option value="20+">20+</option>
+                        </select>
+                    </div>
 
-              <div class="form-group">
-                <label for="subject" class="form-label">
-                  Subject <span class="required">*</span>
-                </label>
-                <select
-                  id="subject"
-                  name="subject"
-                  class="form-select"
-                  required
-                  aria-required="true"
-                >
-                  <option value="">Select a subject</option>
-                  <option value="general">General Inquiry</option>
-                  <option value="demo">Demo Request</option>
-                  <option value="support">Technical Support</option>
-                  <option value="partnership">Partnership Opportunity</option>
-                  <option value="other">Other</option>
-                </select>
-                <span class="form-helper error" id="subjectError" style="display: none;"></span>
-              </div>
+                    <div class="form-group">
+                        <label for="pain-point">Biggest operational pain point *</label>
+                        <textarea id="pain-point" name="pain-point" required placeholder="Describe the main operational challenge in your coaching practice..."></textarea>
+                    </div>
 
-              <div class="form-group">
-                <label for="message" class="form-label">
-                  Message <span class="required">*</span>
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  class="form-textarea"
-                  placeholder="Tell us how we can help..."
-                  required
-                  aria-required="true"
-                  rows="6"
-                ></textarea>
-                <span class="form-helper error" id="messageError" style="display: none;"></span>
-              </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1rem;">
+                        Book a Walkthrough
+                    </button>
 
-              <button type="submit" class="btn btn-primary btn-large" style="width: 100%;" data-analytics="cta_contact_submit">
-                Send Message
-              </button>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-light); text-align: center;">
+                        By submitting this form, you agree to our <a href="#" style="color: var(--dark-sage);">Privacy Policy</a>.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
 
-              <div id="formSuccess" class="card" style="display: none; margin-top: var(--spacing-xs); background: var(--color-accent-light-green); border: 2px solid var(--color-success-green);">
-                <p style="color: var(--color-success-green); font-weight: var(--font-weight-semibold); margin: 0;">
-                  ✓ Message sent successfully! We'll get back to you within 24 hours.
+    <!-- Alternative Contact -->
+    <section class="section section-alt">
+        <div class="container text-center">
+            <h2 class="mb-md">Prefer to Explore on Your Own First?</h2>
+            <div class="btn-group">
+                <a href="pricing.html" class="btn btn-primary">Start Free 14-Day Trial</a>
+                <a href="how-it-works.html" class="btn btn-outline">Watch 3-Min Demo Video</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Illustration -->
+    <section class="section">
+        <div class="container text-center">
+            <div style="max-width: 400px; margin: 0 auto; background: var(--bg-light); border: 2px dashed var(--border-color); border-radius: 1rem; padding: 3rem;">
+                <p style="color: var(--text-medium); font-size: 1rem; margin: 0;">
+                    <strong>Abstract illustration of consultation</strong><br/>
+                    <em style="font-size: 0.9rem;">Size: 400×200 px</em><br/>
+                    <em style="font-size: 0.9rem;">Alt: "Abstract illustration representing coaching consultation"</em>
                 </p>
-              </div>
-            </form>
-          </div>
-
-          <!-- Contact Info -->
-          <div>
-            <h2 style="margin-bottom: var(--spacing-xs);">Other Ways to Reach Us</h2>
-            <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-sm);">
-              Prefer a different method? Here are other ways to get in touch.
-            </p>
-
-            <div class="card" style="margin-bottom: var(--spacing-xs);">
-              <div style="display: flex; gap: var(--spacing-2xs); margin-bottom: var(--spacing-2xs);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
-                  <rect x="3" y="5" width="18" height="14" rx="2" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M3 7L12 13L21 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div>
-                  <h4 style="margin-bottom: 4px;">Email</h4>
-                  <a href="mailto:hello@sage.coach" style="color: var(--color-sage-green); font-weight: var(--font-weight-medium);">
-                    hello@sage.coach
-                  </a>
-                  <p class="text-small" style="margin-top: 4px;">
-                    We typically respond within 24 hours (weekdays)
-                  </p>
-                </div>
-              </div>
             </div>
-
-            <div class="card" style="margin-bottom: var(--spacing-xs);">
-              <div style="display: flex; gap: var(--spacing-2xs); margin-bottom: var(--spacing-2xs);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
-                  <circle cx="12" cy="12" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M12 8V12L15 15" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div>
-                  <h4 style="margin-bottom: 4px;">Book a Demo</h4>
-                  <button class="btn-link" id="contactBookDemo" data-analytics="cta_contact_demo" style="padding: 0; font-size: var(--font-size-body-regular);">
-                    Schedule a 30-minute demo →
-                  </button>
-                  <p class="text-small" style="margin-top: 4px;">
-                    See Sage in action and get your questions answered live
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card" style="margin-bottom: var(--spacing-xs);">
-              <div style="display: flex; gap: var(--spacing-2xs); margin-bottom: var(--spacing-2xs);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
-                  <circle cx="12" cy="12" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M12 16V12M12 8H12.01" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div>
-                  <h4 style="margin-bottom: 4px;">Help Center</h4>
-                  <a href="/help.html" class="btn-link" style="padding: 0; font-size: var(--font-size-body-regular);">
-                    Browse documentation →
-                  </a>
-                  <p class="text-small" style="margin-top: 4px;">
-                    Find answers to common questions and setup guides
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card bg-accent-light">
-              <h4 style="margin-bottom: var(--spacing-2xs);">Support Hours</h4>
-              <p style="margin-bottom: var(--spacing-3xs);">
-                <strong>Email Support:</strong><br>
-                Monday - Friday, 9am - 6pm EST
-              </p>
-              <p class="text-small" style="margin: 0; color: var(--color-gray-600);">
-                We aim to respond to all inquiries within 24 hours during business days.
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <div class="header-logo" style="margin-bottom: var(--spacing-2xs); color: var(--color-white);">
-            <img src="/images/logo-icon.png" width="32" height="32" alt="" aria-hidden="true" style="filter: brightness(1.2);" onerror="this.style.display='none'">
-            <span>sage.coach</span>
-          </div>
-          <p class="text-small" style="color: rgba(255, 255, 255, 0.8);">
-            The operating system for career coaching.
-          </p>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Sage.coach</h4>
+                <p>CoachOS is the operating system for career coaching. Sage is the platform built on CoachOS.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="blog.html">Resources</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Product</h4>
+                <a href="roadmap.html">Roadmaps</a>
+                <a href="faq.html">FAQ</a>
+                <a href="#">Security</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="about.html">About</a>
+                <a href="#">Privacy Policy</a>
+                <p style="margin-top: 1rem;">Email: hello@sage.coach</p>
+            </div>
         </div>
-
-        <div class="footer-column">
-          <h5>Product</h5>
-          <ul class="footer-links">
-            <li><a href="/features.html" class="footer-link">Features</a></li>
-            <li><a href="/pricing.html" class="footer-link">Pricing</a></li>
-            <li><a href="/roadmap.html" class="footer-link">Roadmap</a></li>
-            <li><a href="https://app.sage.coach/login" class="footer-link">Login</a></li>
-          </ul>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sage.coach. All rights reserved.</p>
+            </div>
         </div>
-
-        <div class="footer-column">
-          <h5>Company</h5>
-          <ul class="footer-links">
-            <li><a href="/about.html" class="footer-link">About</a></li>
-            <li><a href="/contact.html" class="footer-link">Contact</a></li>
-            <li><a href="/blog.html" class="footer-link">Blog</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h5>Legal</h5>
-          <ul class="footer-links">
-            <li><a href="/terms.html" class="footer-link">Terms of Service</a></li>
-            <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
-            <li><a href="/cookies.html" class="footer-link">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2025 Sage.coach. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Demo Modal -->
-  <div class="modal" id="demoModal" role="dialog" aria-labelledby="demoModalTitle" aria-modal="true">
-    <div class="modal-backdrop" id="modalBackdrop"></div>
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="demoModalTitle">Book Your Demo</h3>
-        <button class="modal-close" id="modalClose" aria-label="Close modal">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div id="calEmbed" style="min-height: 600px;">
-          <iframe
-            src="https://cal.com/joshbob?embed=true"
-            width="100%"
-            height="600"
-            frameborder="0"
-            title="Book a demo with Sage.coach">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="/js/main.js"></script>
-  <script>
-    // Contact page specific JavaScript
-    const contactDemoBtn = document.getElementById('contactBookDemo');
-    if (contactDemoBtn) {
-      contactDemoBtn.addEventListener('click', openDemoModal);
-    }
-
-    // Form validation
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-
-        // Clear previous errors
-        document.querySelectorAll('.form-helper.error').forEach(el => el.style.display = 'none');
-        document.querySelectorAll('.form-input, .form-textarea, .form-select').forEach(el => {
-          el.classList.remove('error');
-          el.classList.remove('success');
-        });
-
-        // Validate
-        let isValid = true;
-
-        const name = document.getElementById('name');
-        if (!name.value.trim()) {
-          showFieldError('name', 'Please enter your name');
-          isValid = false;
-        }
-
-        const email = document.getElementById('email');
-        if (!email.value.trim() || !isValidEmail(email.value)) {
-          showFieldError('email', 'Please enter a valid email address');
-          isValid = false;
-        }
-
-        const subject = document.getElementById('subject');
-        if (!subject.value) {
-          showFieldError('subject', 'Please select a subject');
-          isValid = false;
-        }
-
-        const message = document.getElementById('message');
-        if (!message.value.trim()) {
-          showFieldError('message', 'Please enter a message');
-          isValid = false;
-        }
-
-        if (!isValid) return;
-
-        // Show loading state
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.innerHTML;
-        submitButton.disabled = true;
-        submitButton.innerHTML = '<span class="loading-spinner"></span> Sending...';
-
-        try {
-          // TODO: Replace with actual form submission endpoint
-          // For now, simulate a successful submission
-          await new Promise(resolve => setTimeout(resolve, 1500));
-
-          // Mark fields as success
-          document.querySelectorAll('.form-input, .form-textarea, .form-select').forEach(el => {
-            el.classList.add('success');
-          });
-
-          // Show success message
-          document.getElementById('formSuccess').style.display = 'block';
-          contactForm.reset();
-
-          // Track event
-          trackEvent('contact_form_submit', { success: true, subject: subject.value });
-
-          // Scroll to success message
-          document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        } catch (error) {
-          showToast('Oops! Something went wrong. Please try again.', 'error');
-          trackEvent('contact_form_submit', { success: false, error: error.message });
-        } finally {
-          submitButton.disabled = false;
-          submitButton.innerHTML = originalText;
-        }
-      });
-    }
-
-    function showFieldError(fieldId, message) {
-      const field = document.getElementById(fieldId);
-      const errorEl = document.getElementById(fieldId + 'Error');
-
-      if (field && errorEl) {
-        field.classList.add('error');
-        errorEl.textContent = message;
-        errorEl.style.display = 'block';
-      }
-    }
-
-    function isValidEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-  </script>
+    </footer>
 </body>
 </html>

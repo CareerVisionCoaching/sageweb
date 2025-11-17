@@ -1,1144 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <!-- SEO Meta Tags -->
-  <title>Pricing - Sage.coach | Plans That Grow With Your Coaching Practice</title>
-  <meta name="description" content="Start free for 14 days. No credit card required. Plans from $49/month for solo coaches to $399/month for coaching organizations.">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Pricing - Sage.coach">
-  <meta property="og:description" content="Plans that grow with your coaching practice. Start free for 14 days, no credit card required.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sage.coach/pricing">
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://sage.coach/pricing">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/global.css">
-  <link rel="stylesheet" href="/css/components.css">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
-
-  <style>
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--spacing-sm);
-      margin-top: var(--spacing-lg);
-    }
-
-    .pricing-card {
-      background: var(--color-white);
-      border-radius: var(--radius-large);
-      padding: var(--spacing-md);
-      border: 2px solid var(--color-gray-200);
-      transition: all var(--transition-medium);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .pricing-card.featured {
-      border-color: var(--color-deep-forest);
-      box-shadow: var(--shadow-lg);
-      transform: scale(1.05);
-      position: relative;
-    }
-
-    .pricing-card.featured::before {
-      content: 'Most Popular';
-      position: absolute;
-      top: -16px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--color-deep-forest);
-      color: var(--color-white);
-      padding: 4px 16px;
-      border-radius: 20px;
-      font-size: var(--font-size-body-small);
-      font-weight: var(--font-weight-medium);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .pricing-card:hover {
-      border-color: var(--color-sage-green);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-card-hover);
-    }
-
-    .pricing-card.featured:hover {
-      transform: scale(1.05) translateY(-4px);
-    }
-
-    .price-header {
-      text-align: center;
-      padding-bottom: var(--spacing-xs);
-      border-bottom: 1px solid var(--color-gray-200);
-      margin-bottom: var(--spacing-xs);
-    }
-
-    .price-name {
-      font-size: var(--font-size-h4);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-deep-forest);
-      margin-bottom: var(--spacing-3xs);
-    }
-
-    .price-amount {
-      font-size: var(--font-size-h2-desktop);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-deep-forest);
-      margin-bottom: var(--spacing-3xs);
-    }
-
-    .price-period {
-      font-size: var(--font-size-body-regular);
-      color: var(--color-gray-600);
-      font-weight: var(--font-weight-regular);
-    }
-
-    .price-tagline {
-      font-size: var(--font-size-body-small);
-      color: var(--color-gray-600);
-      margin-bottom: var(--spacing-2xs);
-      text-align: center;
-      font-style: italic;
-      min-height: 40px;
-    }
-
-    .price-clients {
-      font-size: var(--font-size-body-regular);
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-deep-forest);
-      text-align: center;
-      margin-bottom: var(--spacing-3xs);
-    }
-
-    .price-coaches {
-      font-size: var(--font-size-body-small);
-      color: var(--color-gray-600);
-      text-align: center;
-      margin-bottom: var(--spacing-xs);
-    }
-
-    .price-features {
-      list-style: none;
-      padding: 0;
-      margin: var(--spacing-xs) 0;
-      flex-grow: 1;
-    }
-
-    .price-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: var(--spacing-3xs);
-      margin-bottom: var(--spacing-2xs);
-      font-size: var(--font-size-body-regular);
-    }
-
-    .price-cta {
-      margin-top: auto;
-      padding-top: var(--spacing-xs);
-    }
-
-    /* Feature Comparison Table */
-    .comparison-section {
-      margin-bottom: var(--spacing-lg);
-    }
-
-    .comparison-title {
-      font-size: var(--font-size-h5);
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-deep-forest);
-      margin-bottom: var(--spacing-xs);
-      padding-bottom: var(--spacing-3xs);
-      border-bottom: 2px solid var(--color-sage-green);
-    }
-
-    .comparison-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--color-white);
-      border-radius: var(--radius-medium);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-      padding: var(--spacing-2xs) var(--spacing-xs);
-      text-align: left;
-      border-bottom: 1px solid var(--color-gray-200);
-    }
-
-    .comparison-table th {
-      background: var(--color-soft-ivory);
-      font-weight: var(--font-weight-semibold);
-      font-size: var(--font-size-body-small);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .comparison-table th:not(:first-child) {
-      text-align: center;
-      width: 120px;
-    }
-
-    .comparison-table td:not(:first-child) {
-      text-align: center;
-    }
-
-    .comparison-table tbody tr:hover {
-      background: var(--color-soft-ivory);
-    }
-
-    .comparison-table tbody tr:last-child td {
-      border-bottom: none;
-    }
-
-    .check-icon {
-      color: var(--color-sage-green);
-      font-weight: var(--font-weight-bold);
-      font-size: 18px;
-    }
-
-    .dash-icon {
-      color: var(--color-gray-400);
-      font-size: 18px;
-    }
-
-    /* FAQ Accordion */
-    .faq-item {
-      background: var(--color-white);
-      border-radius: var(--radius-medium);
-      border: 1px solid var(--color-gray-200);
-      margin-bottom: var(--spacing-2xs);
-      overflow: hidden;
-    }
-
-    .faq-item summary {
-      font-size: var(--font-size-body-regular);
-      font-weight: var(--font-weight-semibold);
-      padding: var(--spacing-xs);
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background var(--transition-fast);
-    }
-
-    .faq-item summary:hover {
-      background: var(--color-soft-ivory);
-    }
-
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq-icon {
-      font-size: 24px;
-      transition: transform var(--transition-fast);
-      color: var(--color-sage-green);
-    }
-
-    .faq-item[open] .faq-icon {
-      transform: rotate(45deg);
-    }
-
-    .faq-answer {
-      padding: 0 var(--spacing-xs) var(--spacing-xs);
-      color: var(--color-gray-700);
-      line-height: 1.6;
-    }
-
-    @media (max-width: 1023px) {
-      .pricing-grid {
-        grid-template-columns: 1fr;
-        max-width: 480px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .pricing-card.featured {
-        transform: none;
-      }
-
-      .pricing-card.featured:hover {
-        transform: translateY(-4px);
-      }
-
-      .comparison-table {
-        display: block;
-        overflow-x: auto;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Sage.coach</title>
+    <meta name="description" content="Simple per-client pricing for career coaches. Scale your practice without worrying about platform costs eating your margins.">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a href="#main-content" class="skip-to-main">Skip to main content</a>
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M16 2L4 8v12c0 7.3 5.3 12.6 12 14 6.7-1.4 12-6.7 12-14V8L16 2z"/>
+                </svg>
+                Sage.coach
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="/" class="header-logo" aria-label="Sage.coach home">
-        <img src="/images/logo-icon.png" width="32" height="32" alt="" aria-hidden="true" onerror="this.style.display='none'">
-        <span>sage.coach</span>
-      </a>
-
-      <nav class="header-nav" aria-label="Main navigation">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="/features.html" class="nav-link">Features</a></li>
-          <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
-          <li><a href="/about.html" class="nav-link">About</a></li>
-          <li><a href="/contact.html" class="nav-link">Contact</a></li>
-        </ul>
-
-        <a href="https://app.sage.coach/signup" class="btn btn-primary" data-analytics="cta_header_trial">
-          Start Free Trial
-        </a>
-
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main-content">
     <!-- Hero Section -->
-    <section class="bg-soft-ivory section" style="padding-top: var(--spacing-2xl);">
-      <div class="container text-center" style="max-width: 840px;">
-        <h1>Plans that Grow With Your Coaching Practice</h1>
-        <p class="text-large" style="max-width: 640px; margin: var(--spacing-xs) auto 0;">
-          Start free for 14 days. No credit card required.
-        </p>
-      </div>
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container text-center">
+            <h1>Simple Pricing. No Surprises.</h1>
+            <p style="max-width: 700px; margin: 0 auto;">Priced per active client. Scale your practice without worrying about platform costs eating your margins.</p>
+        </div>
     </section>
 
-    <!-- Pricing Cards -->
-    <section class="bg-soft-ivory" style="padding-bottom: var(--spacing-2xl);">
-      <div class="container">
-        <div class="pricing-grid">
+    <!-- Pricing Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Individual Coach Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-tier">Individual Coach</div>
+                    <p style="color: var(--text-medium); margin-bottom: 1rem;">For independent career coaches</p>
+                    <div class="pricing-amount">$—/mo</div>
+                    <p style="font-size: 0.875rem; color: var(--text-light); margin-bottom: 2rem;">Up to 8 active clients</p>
+                    <ul class="pricing-features">
+                        <li>Session logging & notes</li>
+                        <li>CoachOS roadmaps</li>
+                        <li>AI summaries & prep</li>
+                        <li>Practice analytics (Basic)</li>
+                        <li>Team collaboration: No</li>
+                        <li>White-label option: No</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Request Detailed Pricing</a>
+                </div>
 
-          <!-- Foundation Plan -->
-          <div class="pricing-card">
-            <div class="price-header">
-              <p class="price-name">Foundation</p>
-              <div class="price-amount">$49<span class="price-period">/month</span></div>
+                <!-- Team/Practice Plan (Featured) -->
+                <div class="pricing-card featured">
+                    <div style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem; border-radius: 0.5rem; margin-bottom: 1rem; font-weight: 600; font-size: 0.875rem;">
+                        MOST POPULAR
+                    </div>
+                    <div class="pricing-tier">Team/Practice</div>
+                    <p style="color: rgba(255,255,255,0.9); margin-bottom: 1rem;">For growing coaching practices</p>
+                    <div class="pricing-amount">$—/mo</div>
+                    <p style="font-size: 0.875rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem;">Up to 50 active clients</p>
+                    <ul class="pricing-features">
+                        <li>Session logging & notes</li>
+                        <li>CoachOS roadmaps</li>
+                        <li>AI summaries & prep</li>
+                        <li>Practice analytics (Advanced)</li>
+                        <li>Team collaboration: Yes</li>
+                        <li>White-label option: No</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem; background: white; color: var(--dark-sage);">Request Detailed Pricing</a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-tier">Enterprise</div>
+                    <p style="color: var(--text-medium); margin-bottom: 1rem;">For large coaching organizations</p>
+                    <div class="pricing-amount">Custom</div>
+                    <p style="font-size: 0.875rem; color: var(--text-light); margin-bottom: 2rem;">Custom active clients</p>
+                    <ul class="pricing-features">
+                        <li>Session logging & notes</li>
+                        <li>CoachOS roadmaps</li>
+                        <li>AI summaries & prep</li>
+                        <li>Practice analytics (Custom)</li>
+                        <li>Team collaboration: Yes</li>
+                        <li>White-label option: Yes</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Contact Us</a>
+                </div>
             </div>
-
-            <p class="price-tagline">For coaches establishing a structured, professional practice.</p>
-
-            <p class="price-clients">Up to 10 active clients</p>
-            <p class="price-coaches">Unlimited archived clients</p>
-
-            <ul class="price-features">
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Core Roadmaps</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Review Request Tracking</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Job Application Tracking</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Networking Tracker</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Session Logs &amp; Scheduling</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Single-Coach Dashboard</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Email Support</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>2GB File Storage</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>No AI features</span>
-              </li>
-            </ul>
-
-            <div class="price-cta">
-              <a href="https://app.sage.coach/signup?plan=foundation" class="btn btn-secondary" style="width: 100%;" data-analytics="cta_pricing_foundation">
-                Start Free
-              </a>
-            </div>
-          </div>
-
-          <!-- Growth Plan (Featured) -->
-          <div class="pricing-card featured">
-            <div class="price-header">
-              <p class="price-name">Growth</p>
-              <div class="price-amount">$149<span class="price-period">/month</span></div>
-            </div>
-
-            <p class="price-tagline">For coaches and small teams ready to scale with AI and automation.</p>
-
-            <p class="price-clients">Up to 25 active clients</p>
-            <p class="price-coaches">Unlimited coaches</p>
-
-            <ul class="price-features">
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span><strong>Everything in Foundation</strong></span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Custom Roadmaps</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>AI Review Summaries &amp; Feedback Drafting</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>AI Resume Tailoring &amp; Keyword Match</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>AI Outreach Message Builder</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>AI Interview Insights</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Multi-Coach Collaboration</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Org-Wide Analytics</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>10GB Storage</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Optional Onboarding Call</span>
-              </li>
-            </ul>
-
-            <div class="price-cta">
-              <a href="https://app.sage.coach/signup?plan=growth" class="btn btn-primary" style="width: 100%;" data-analytics="cta_pricing_growth">
-                Start Free
-              </a>
-            </div>
-          </div>
-
-          <!-- Impact Plan -->
-          <div class="pricing-card">
-            <div class="price-header">
-              <p class="price-name">Impact</p>
-              <div class="price-amount">$399<span class="price-period">/month</span></div>
-            </div>
-
-            <p class="price-tagline">For established coaching organizations delivering high-volume results.</p>
-
-            <p class="price-clients">Up to 60 active clients</p>
-            <p class="price-coaches">Unlimited coaches</p>
-
-            <ul class="price-features">
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span><strong>Everything in Growth</strong></span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>AI-Generated Roadmaps</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Predictive Job Search Analytics</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Org-Wide Interview Pipeline</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Org Social Graph</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>AI "Who Needs Help?" Engine</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Automated AI Session Summaries</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Team Hierarchy Support</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Business Performance Dashboard</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Dedicated Success Manager</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="10" cy="10" r="9" stroke="#A3B9A0" stroke-width="2"/>
-                  <path d="M6 10L9 13L14 7" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>25GB Storage</span>
-              </li>
-            </ul>
-
-            <div class="price-cta">
-              <a href="https://app.sage.coach/signup?plan=impact" class="btn btn-secondary" style="width: 100%;" data-analytics="cta_pricing_impact">
-                Start Free
-              </a>
-            </div>
-          </div>
-
         </div>
-      </div>
     </section>
 
-    <!-- Feature Comparison Table -->
-    <section class="bg-white section-lg">
-      <div class="container">
-        <h2 class="text-center" style="margin-bottom: var(--spacing-lg);">Feature Comparison</h2>
-
-        <!-- Roadmaps -->
-        <div class="comparison-section">
-          <h3 class="comparison-title">Roadmaps</h3>
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Foundation</th>
-                <th>Growth</th>
-                <th>Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Core Roadmaps</td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Custom Roadmaps</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>AI Roadmap Suggestions</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>AI-Generated Roadmaps</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-            </tbody>
-          </table>
+    <!-- Note about trial -->
+    <section class="section section-alt">
+        <div class="container text-center">
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1rem; color: var(--text-medium);">
+                <strong>Note:</strong> All plans include full CoachOS feature access during trial. No credit card required.
+            </p>
         </div>
-
-        <!-- Review Requests -->
-        <div class="comparison-section">
-          <h3 class="comparison-title">Review Requests</h3>
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Foundation</th>
-                <th>Growth</th>
-                <th>Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Review Request Tracking</td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>AI Review Summaries</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>AI Rewrite &amp; Consistency Tools</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Job Applications -->
-        <div class="comparison-section">
-          <h3 class="comparison-title">Job Applications</h3>
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Foundation</th>
-                <th>Growth</th>
-                <th>Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Job Tracking</td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>AI Keyword Match</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Resume Tailoring</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Predictive Analytics</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Networking -->
-        <div class="comparison-section">
-          <h3 class="comparison-title">Networking</h3>
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Foundation</th>
-                <th>Growth</th>
-                <th>Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Networking Tracker</td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>AI Outreach Builder</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Shared Org Network</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Org Social Graph</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Coaching Tools -->
-        <div class="comparison-section">
-          <h3 class="comparison-title">Coaching Tools</h3>
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Foundation</th>
-                <th>Growth</th>
-                <th>Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Single-Coach Dashboard</td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Multi-Coach Collaboration</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Coach Productivity Insights</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>AI Attention Engine</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Team Hierarchy</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Storage + Limits -->
-        <div class="comparison-section">
-          <h3 class="comparison-title">Storage + Limits</h3>
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Foundation</th>
-                <th>Growth</th>
-                <th>Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>File Storage</td>
-                <td>2GB</td>
-                <td>10GB</td>
-                <td>25GB</td>
-              </tr>
-              <tr>
-                <td>Active Client Limit</td>
-                <td>10</td>
-                <td>25</td>
-                <td>60</td>
-              </tr>
-              <tr>
-                <td>Unlimited Coaches</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- AI Usage -->
-        <div class="comparison-section">
-          <h3 class="comparison-title">AI Usage</h3>
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Foundation</th>
-                <th>Growth</th>
-                <th>Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>AI Events per Client</td>
-                <td>0</td>
-                <td>30</td>
-                <td>200</td>
-              </tr>
-              <tr>
-                <td>AI Session Agendas</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>AI Session Summaries</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Org + Admin -->
-        <div class="comparison-section">
-          <h3 class="comparison-title">Org + Admin</h3>
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Foundation</th>
-                <th>Growth</th>
-                <th>Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Org Settings</td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Org Analytics</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Business Dashboard</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Custom Programs</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Support -->
-        <div class="comparison-section">
-          <h3 class="comparison-title">Support</h3>
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Foundation</th>
-                <th>Growth</th>
-                <th>Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Email Support</td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Onboarding Call</td>
-                <td><span class="dash-icon">—</span></td>
-                <td>Paid Add-On</td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Dedicated Success Manager</td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="dash-icon">—</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="bg-soft-ivory section-lg">
-      <div class="container" style="max-width: 840px;">
-        <h2 class="text-center" style="margin-bottom: var(--spacing-lg);">Frequently Asked Questions</h2>
-
-        <details class="faq-item">
-          <summary>
-            <span>Do I need to pay per coach?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p>No. You can add unlimited coaches, assistants, or collaborators at no extra cost. Pricing is based entirely on the number of <strong>active clients</strong>.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span>What counts as an active client?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p>Any client marked as Active, Interviewing, or In-Program. Archived or graduated clients do <strong>not</strong> count toward plan limits.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span>Can I upgrade or downgrade as I grow?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p>Yes. Upgrades apply immediately; downgrades apply next billing cycle.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span>Will anything break if I exceed a plan limit?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p>No. You simply won't be able to add new active clients until upgrading.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span>Is there a contract?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p>No long-term commitments. Plans are monthly with an annual discount option.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span>Do you offer migration support?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p>Yes. Growth and Impact plans include optional migration help from tools like Notion, Excel, or Airtable. Impact plans include full white-glove onboarding.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span>What happens after the trial ends?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p>You'll choose a plan. Your data stays intact whether you subscribe or pause.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span>Are AI features optional?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p>Yes. AI can be turned on/off per coach or per client.</p>
-          </div>
-        </details>
-      </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="bg-deep-forest section-lg" style="color: var(--color-white);">
-      <div class="container text-center" style="max-width: 640px;">
-        <h2 style="color: var(--color-white);">Start your 14-day free trial</h2>
-        <p class="text-large" style="color: rgba(255, 255, 255, 0.9); margin-bottom: var(--spacing-md);">
-          No credit card required.
-        </p>
-
-        <div class="cta-group" style="justify-content: center;">
-          <a href="https://app.sage.coach/signup" class="btn btn-white btn-large" data-analytics="cta_pricing_final_trial">
-            Start Free Trial
-          </a>
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="mb-md">Start Your 14-Day Trial</h2>
+            <p class="mb-lg" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem;">See if Sage makes your coaching more effective and less chaotic. No credit card required.</p>
+            <div class="btn-group">
+                <a href="contact.html" class="btn btn-primary">Request Detailed Pricing</a>
+                <a href="faq.html" class="btn btn-outline">View FAQ</a>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <div class="header-logo" style="margin-bottom: var(--spacing-2xs); color: var(--color-white);">
-            <img src="/images/logo-icon.png" width="32" height="32" alt="" aria-hidden="true" style="filter: brightness(1.2);" onerror="this.style.display='none'">
-            <span>sage.coach</span>
-          </div>
-          <p class="text-small" style="color: rgba(255, 255, 255, 0.8);">
-            The operating system for career coaching.
-          </p>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Sage.coach</h4>
+                <p>CoachOS is the operating system for career coaching. Sage is the platform built on CoachOS.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="blog.html">Resources</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Product</h4>
+                <a href="roadmap.html">Roadmaps</a>
+                <a href="faq.html">FAQ</a>
+                <a href="#">Security</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="about.html">About</a>
+                <a href="#">Privacy Policy</a>
+                <p style="margin-top: 1rem;">Email: hello@sage.coach</p>
+            </div>
         </div>
-
-        <div class="footer-column">
-          <h5>Product</h5>
-          <ul class="footer-links">
-            <li><a href="/features.html" class="footer-link">Features</a></li>
-            <li><a href="/pricing.html" class="footer-link">Pricing</a></li>
-            <li><a href="/roadmap.html" class="footer-link">Roadmap</a></li>
-            <li><a href="https://app.sage.coach/login" class="footer-link">Login</a></li>
-          </ul>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sage.coach. All rights reserved.</p>
+            </div>
         </div>
-
-        <div class="footer-column">
-          <h5>Company</h5>
-          <ul class="footer-links">
-            <li><a href="/about.html" class="footer-link">About</a></li>
-            <li><a href="/contact.html" class="footer-link">Contact</a></li>
-            <li><a href="/blog.html" class="footer-link">Blog</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h5>Legal</h5>
-          <ul class="footer-links">
-            <li><a href="/terms.html" class="footer-link">Terms of Service</a></li>
-            <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
-            <li><a href="/cookies.html" class="footer-link">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2025 Sage.coach. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/js/main.js"></script>
+    </footer>
 </body>
 </html>

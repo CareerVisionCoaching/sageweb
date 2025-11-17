@@ -1,305 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>About - Sage.coach | Built by a Coach Who Gets It</title>
-  <meta name="description" content="Sage.coach was born from real coaching experience. Founder Josh Bob personally coached 150+ clients into roles at Google, Amazon, and more.">
-
-  <link rel="canonical" href="https://sage.coach/about">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/global.css">
-  <link rel="stylesheet" href="/css/components.css">
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sage.coach</title>
+    <meta name="description" content="Sage exists because I got exhausted rebuilding my coaching process for every client. CoachOS is what happens when someone who understands coaching builds the platform they actually need.">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a href="#main-content" class="skip-to-main">Skip to main content</a>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="/" class="header-logo">
-        <img src="/images/logo-icon.png" width="32" height="32" alt="" aria-hidden="true" onerror="this.style.display='none'">
-        <span>sage.coach</span>
-      </a>
-
-      <nav class="header-nav">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="/features.html" class="nav-link">Features</a></li>
-          <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
-          <li><a href="/about.html" class="nav-link">About</a></li>
-          <li><a href="/contact.html" class="nav-link">Contact</a></li>
-        </ul>
-
-        <a href="https://app.sage.coach/signup" class="btn btn-primary" data-analytics="cta_header_trial">
-          Start Free Trial
-        </a>
-
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main-content">
-    <!-- Hero -->
-    <section class="bg-soft-ivory section-lg">
-      <div class="container text-center" style="max-width: 840px;">
-        <h1>Built by a Coach Who Gets It</h1>
-        <p class="text-large">
-          Sage was born from real coaching experience and the frustration of tools that just didn't fit.
-        </p>
-      </div>
-    </section>
-
-    <!-- Founder Story -->
-    <section class="bg-white section-lg">
-      <div class="container" style="max-width: 840px;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); align-items: start; margin-bottom: var(--spacing-lg);">
-          <div>
-            <!-- Founder Photo Placeholder -->
-            <div style="background: linear-gradient(135deg, #DCE6DC 0%, #A3B9A0 100%); border-radius: var(--radius-large); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; margin-bottom: var(--spacing-xs);">
-              <div style="text-align: center; padding: var(--spacing-md); color: var(--color-deep-forest);">
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto;">
-                  <circle cx="32" cy="24" r="12" stroke="currentColor" stroke-width="2"/>
-                  <path d="M16 56C16 44 22 40 32 40C42 40 48 44 48 56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M16 2L4 8v12c0 7.3 5.3 12.6 12 14 6.7-1.4 12-6.7 12-14V8L16 2z"/>
                 </svg>
-                <p style="font-size: var(--font-size-body-small); margin-top: var(--spacing-2xs);">
-                  [Founder Photo]<br>
-                  <span style="font-size: var(--font-size-body-tiny); opacity: 0.7;">800×800px</span>
-                </p>
-              </div>
-            </div>
-            <p class="text-center text-small" style="color: var(--color-gray-600);">Josh Bob, Founder</p>
-          </div>
-
-          <div>
-            <h2>The Origin Story</h2>
-            <p style="margin-bottom: var(--spacing-xs);">
-              I'm Josh Bob, and before building Sage, I spent 4+ years as a career coach helping mid-career tech professionals land their dream jobs at companies like Google, Amazon, HubSpot, Meta, Reddit, and dozens of fast-growth startups.
-            </p>
-            <p style="margin-bottom: var(--spacing-xs);">
-              I personally coached 150+ clients through 1,000+ sessions. I reviewed thousands of resumes and LinkedIn profiles. I guided people through career transitions, helped them negotiate offers, and celebrated when they landed roles they were proud of.
-            </p>
-            <p style="margin-bottom: var(--spacing-xs);">
-              But here's the thing: <strong>the tools I was using weren't built for what I was doing.</strong>
-            </p>
-          </div>
+                Sage.coach
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <div class="card bg-accent-light" style="padding: var(--spacing-md); margin-bottom: var(--spacing-lg);">
-          <h3>The Breaking Point</h3>
-          <p style="margin-bottom: var(--spacing-xs);">
-            Three clients in the same week missed deadlines because each thought they were waiting on the other. I realized: if I, someone obsessed with structure, can't keep it straight - how is any other coach supposed to scale this?
-          </p>
-          <p style="font-style: italic; color: var(--color-deep-forest); margin: 0;">
-            "Sage wasn't born in a brainstorm; it was born in frustration."
-          </p>
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container text-center">
+            <h1>Built By Someone Who Was Tired Of The Chaos</h1>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.125rem;">CoachOS is what happens when someone who understands coaching builds the platform they actually need.</p>
         </div>
-
-        <p style="margin-bottom: var(--spacing-xs);">
-          I was managing clients across Notion, Google Sheets, Calendly, Gmail, Drive, and Slack. Every tool worked fine on its own, but nothing talked to each other. I spent 5-10 hours a week just moving information around, tracking who needed what, and trying to remember where I left that one client's updated resume.
-        </p>
-
-        <p style="margin-bottom: var(--spacing-xs);">
-          Generic CRMs were built for sales pipelines, not career transformations. Practice management tools were designed for wellness coaches, not job search journeys. And cobbling together Notion templates only worked until I hit 20+ clients.
-        </p>
-
-        <p style="margin-bottom: var(--spacing-xs);">
-          So I built Sage - first for myself, then for coaches like me.
-        </p>
-
-        <h3 style="margin-top: var(--spacing-lg);">Built in the Trenches</h3>
-        <p style="margin-bottom: var(--spacing-xs);">
-          Every feature in Sage comes from real coaching experience:
-        </p>
-        <ul style="margin-bottom: var(--spacing-lg);">
-          <li><strong>Visual roadmaps</strong> - because clients need to see their progress, not just hear about it</li>
-          <li><strong>Review requests</strong> - because tracking resume versions in email threads is chaos</li>
-          <li><strong>Automated reminders</strong> - because follow-up shouldn't take an hour every Sunday</li>
-          <li><strong>Analytics</strong> - because "I think this is working" isn't good enough</li>
-        </ul>
-
-        <p>
-          I used early prototypes in my own coaching practice before offering them to anyone else. Client completion rates went from 78% to 91%. Review turnaround dropped by 50%. I saved 8-10 hours per week. Most importantly: my clients felt more confident and less lost during their search.
-        </p>
-      </div>
     </section>
 
-    <!-- Mission & Values -->
-    <section class="bg-soft-ivory section-lg">
-      <div class="container">
-        <div class="text-center" style="margin-bottom: var(--spacing-lg);">
-          <h2>Our Mission</h2>
-          <p class="text-large" style="max-width: 640px; margin: var(--spacing-xs) auto 0;">
-            To elevate the profession of coaching by giving talented coaches the structure and technology to focus on transformation, not logistics.
-          </p>
+    <!-- Mission Statement -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                <div>
+                    <h2 class="mb-md">Mission</h2>
+                    <p class="mb-md">Sage exists because I got exhausted rebuilding my coaching process for every client while trying to remember which framework I used with whom and whether I followed up on that thing I said I would.</p>
+                    <p class="mb-md">I'm a career coach. I've guided hundreds of tech professionals through transitions. The coaching part? I'm good at that. The administrative infrastructure to deliver coaching consistently across multiple clients simultaneously? That was killing me.</p>
+                    <p class="mb-md">So I built the operating system I needed. CoachOS is what happens when someone who understands coaching builds the platform they actually need - not what sounds good in a product demo.</p>
+                    <p>Turns out, a lot of coaches need it too.</p>
+                </div>
+                <div>
+                    <svg width="100%" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="400" height="400" fill="#f8fafc"/>
+                        <!-- Abstract collaboration illustration -->
+                        <circle cx="150" cy="150" r="60" fill="#4F7052" opacity="0.2"/>
+                        <circle cx="250" cy="150" r="60" fill="#ACCAAF" opacity="0.2"/>
+                        <circle cx="200" cy="250" r="60" fill="#80ACC2" opacity="0.2"/>
+                        <!-- Connecting lines -->
+                        <line x1="150" y1="150" x2="250" y2="150" stroke="#4F7052" stroke-width="3" opacity="0.5"/>
+                        <line x1="150" y1="150" x2="200" y2="250" stroke="#4F7052" stroke-width="3" opacity="0.5"/>
+                        <line x1="250" y1="150" x2="200" y2="250" stroke="#ACCAAF" stroke-width="3" opacity="0.5"/>
+                        <!-- Icons representing people -->
+                        <circle cx="150" cy="150" r="25" fill="#4F7052"/>
+                        <circle cx="250" cy="150" r="25" fill="#ACCAAF"/>
+                        <circle cx="200" cy="250" r="25" fill="#80ACC2"/>
+                        <!-- Abstract representation of mentorship -->
+                        <text x="200" y="340" text-anchor="middle" fill="#475569" font-size="16" font-weight="600">Collaboration & Mentorship</text>
+                    </svg>
+                </div>
+            </div>
         </div>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm);">
-          <div class="card text-center">
-            <div style="margin-bottom: var(--spacing-2xs);">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto;">
-                <path d="M24 12L28 20L36 22L30 28L32 36L24 32L16 36L18 28L12 22L20 20L24 12Z" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h4>Coach-First Design</h4>
-            <p style="color: var(--color-gray-600);">
-              Built by a coach who lived the pain. Every feature solves a real problem.
-            </p>
-          </div>
-
-          <div class="card text-center">
-            <div style="margin-bottom: var(--spacing-2xs);">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto;">
-                <circle cx="24" cy="24" r="16" stroke="#A3B9A0" stroke-width="2"/>
-                <path d="M24 16V24L30 28" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h4>Continuous Improvement</h4>
-            <p style="color: var(--color-gray-600);">
-              We're building in public with our community. Your feedback shapes our roadmap.
-            </p>
-          </div>
-
-          <div class="card text-center">
-            <div style="margin-bottom: var(--spacing-2xs);">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto;">
-                <circle cx="18" cy="20" r="6" stroke="#A3B9A0" stroke-width="2"/>
-                <circle cx="32" cy="20" r="6" stroke="#A3B9A0" stroke-width="2"/>
-                <path d="M10 36C10 30 13 28 18 28C22 28 24 29 24 32M26 32C26 29 28 28 32 28C37 28 40 30 40 36" stroke="#A3B9A0" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h4>Community-Driven</h4>
-            <p style="color: var(--color-gray-600);">
-              Coaches helping coaches. We're stronger together than scattered across tools.
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- CTA -->
-    <section class="bg-deep-forest section-lg" style="color: var(--color-white);">
-      <div class="container text-center" style="max-width: 640px;">
-        <h2 style="color: var(--color-white);">Want to Learn More?</h2>
-        <p class="text-large" style="color: rgba(255, 255, 255, 0.9); margin-bottom: var(--spacing-md);">
-          Book a demo and see how Sage can transform your coaching practice.
-        </p>
-
-        <div class="cta-group" style="justify-content: center;">
-          <button class="btn btn-white btn-large" id="aboutBookDemo" data-analytics="cta_about_demo">
-            Book a Demo
-          </button>
-          <a href="/contact.html" class="btn btn-secondary btn-large" style="border-color: var(--color-white); color: var(--color-white);" data-analytics="cta_about_contact">
-            Contact Us
-          </a>
+    <!-- Our Story -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="text-center mb-lg">
+                <h2>Our Story</h2>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="card">
+                    <p class="mb-md">After coaching my 50th client, I realized I was solving the same problems over and over but somehow treating each one like a unique snowflake from an operational standpoint. Different docs. Different tracking systems. Different ways of remembering what we talked about.</p>
+                    <p class="mb-md">The frameworks worked. The human connection worked. But the infrastructure was duct tape and hope.</p>
+                    <p style="margin-bottom: 0;">Sage, built on CoachOS, is the solution to that problem. It's infrastructure that adapts to your coaching style instead of forcing you into someone else's process.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <div class="header-logo" style="margin-bottom: var(--spacing-2xs); color: var(--color-white);">
-            <img src="/images/logo-icon.png" width="32" height="32" alt="" aria-hidden="true" style="filter: brightness(1.2);" onerror="this.style.display='none'">
-            <span>sage.coach</span>
-          </div>
-          <p class="text-small" style="color: rgba(255, 255, 255, 0.8);">
-            The operating system for career coaching.
-          </p>
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="mb-md">See If Sage Fits Your Practice</h2>
+            <p class="mb-lg" style="font-size: 1.125rem; max-width: 700px; margin: 0 auto 2rem;">Book a 15-minute walkthrough with a coach who uses the system. No sales pitch - just honest conversation about whether this solves your specific chaos.</p>
+            <div class="btn-group">
+                <a href="contact.html" class="btn btn-primary">Book a Walkthrough</a>
+                <a href="how-it-works.html" class="btn btn-outline">See How It Works</a>
+            </div>
         </div>
+    </section>
 
-        <div class="footer-column">
-          <h5>Product</h5>
-          <ul class="footer-links">
-            <li><a href="/features.html" class="footer-link">Features</a></li>
-            <li><a href="/pricing.html" class="footer-link">Pricing</a></li>
-            <li><a href="/roadmap.html" class="footer-link">Roadmap</a></li>
-            <li><a href="https://app.sage.coach/login" class="footer-link">Login</a></li>
-          </ul>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Sage.coach</h4>
+                <p>CoachOS is the operating system for career coaching. Sage is the platform built on CoachOS - giving your practice repeatability without rigidity.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Facebook">f</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: hello@sage.coach</p>
+                <p>Support: support@sage.coach</p>
+            </div>
         </div>
-
-        <div class="footer-column">
-          <h5>Company</h5>
-          <ul class="footer-links">
-            <li><a href="/about.html" class="footer-link">About</a></li>
-            <li><a href="/contact.html" class="footer-link">Contact</a></li>
-            <li><a href="/blog.html" class="footer-link">Blog</a></li>
-          </ul>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sage.coach. All rights reserved.</p>
+            </div>
         </div>
-
-        <div class="footer-column">
-          <h5>Legal</h5>
-          <ul class="footer-links">
-            <li><a href="/terms.html" class="footer-link">Terms of Service</a></li>
-            <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
-            <li><a href="/cookies.html" class="footer-link">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2025 Sage.coach. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Demo Modal -->
-  <div class="modal" id="demoModal" role="dialog" aria-labelledby="demoModalTitle" aria-modal="true">
-    <div class="modal-backdrop" id="modalBackdrop"></div>
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="demoModalTitle">Book Your Demo</h3>
-        <button class="modal-close" id="modalClose" aria-label="Close modal">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div id="calEmbed" style="min-height: 600px;">
-          <iframe
-            src="https://cal.com/joshbob?embed=true"
-            width="100%"
-            height="600"
-            frameborder="0"
-            title="Book a demo with Sage.coach">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="/js/main.js"></script>
-  <script>
-    const aboutDemoBtn = document.getElementById('aboutBookDemo');
-    if (aboutDemoBtn) {
-      aboutDemoBtn.addEventListener('click', openDemoModal);
-    }
-  </script>
+    </footer>
 </body>
 </html>
