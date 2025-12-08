@@ -6,6 +6,7 @@
     <title>Pricing - Sage.coach | Plans That Grow With Your Coaching Practice</title>
     <meta name="description" content="Start free for 14 days. No credit card required. Plans from $99/month for solo coaches to $599/month for coaching organizations.">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <style>
         .pricing-grid {
             display: grid;
@@ -325,6 +326,74 @@
             margin-bottom: var(--spacing-md);
         }
 
+        /* Compact Footer */
+        .compact-footer {
+            background-color: var(--dark-sage);
+            color: white;
+            padding: var(--spacing-lg) 0;
+            margin-top: 0;
+        }
+
+        .footer-content-compact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: var(--sage-green);
+        }
+
+        .footer-legal {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .footer-legal p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        .footer-legal a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-legal a:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
         @media (max-width: 1024px) {
             .pricing-grid {
                 grid-template-columns: 1fr;
@@ -345,6 +414,23 @@
                 display: block;
                 overflow-x: auto;
             }
+
+            .footer-content-compact {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--spacing-md);
+            }
+
+            .footer-nav {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .footer-legal {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -353,10 +439,7 @@
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
-                    <path d="M16 2L4 8v12c0 7.3 5.3 12.6 12 14 6.7-1.4 12-6.7 12-14V8L16 2z"/>
-                </svg>
-                Sage.coach
+                <img src="images/logo-full.svg" alt="Sage.coach" height="32">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -1157,39 +1240,27 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="compact-footer">
         <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <div class="logo" style="margin-bottom: 1rem;">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
-                            <path d="M16 2L4 8v12c0 7.3 5.3 12.6 12 14 6.7-1.4 12-6.7 12-14V8L16 2z"/>
-                        </svg>
-                        Sage.coach
-                    </div>
-                    <p style="font-size: 0.9375rem;">The operating system for career coaching.</p>
+            <div class="footer-content-compact">
+                <div class="footer-brand">
+                    <img src="images/logo-full.svg" alt="Sage.coach" height="28" style="filter: brightness(0) invert(1);">
+                    <p>The operating system for career coaching.</p>
                 </div>
-                <div>
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="roadmap.html">Roadmap</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                    </ul>
+                <nav class="footer-nav">
+                    <a href="how-it-works.html">How It Works</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="about.html">About</a>
+                    <a href="testimonials.html">Testimonials</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="footer-legal">
+                    <p>&copy; 2025 Sage.coach</p>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
                 </div>
-                <div>
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Sage.coach. All rights reserved.</p>
             </div>
         </div>
     </footer>
