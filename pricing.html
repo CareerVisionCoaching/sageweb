@@ -163,6 +163,30 @@
             text-align: center;
         }
 
+        /* Pricing card button overrides for better visibility */
+        .pricing-card .btn-secondary {
+            background-color: var(--dark-sage);
+            color: white;
+            border: 2px solid var(--dark-sage);
+        }
+
+        .pricing-card .btn-secondary:hover {
+            background-color: var(--sage-dark);
+            border-color: var(--sage-dark);
+        }
+
+        .pricing-card.featured .btn-primary {
+            background-color: white;
+            color: var(--dark-sage);
+            border: 2px solid white;
+        }
+
+        .pricing-card.featured .btn-primary:hover {
+            background-color: var(--sage-green);
+            color: var(--dark-sage);
+            border-color: var(--sage-green);
+        }
+
         /* Feature Comparison Table */
         .comparison-section {
             margin-bottom: var(--spacing-xl);
@@ -617,7 +641,7 @@
                                 <circle cx="10" cy="10" r="9" stroke="#4F7052" stroke-width="2"/>
                                 <path d="M6 10L9 13L14 7" stroke="#4F7052" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            <span>LinkedIn Engagement Tracking</span>
+                            <span>LinkedIn Engagement Tracking <em>($125/month value!)</em></span>
                         </li>
                         <li>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
