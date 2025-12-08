@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing - Sage.coach | Plans That Grow With Your Coaching Practice</title>
-    <meta name="description" content="Start free for 14 days. No credit card required. Plans from $49/month for solo coaches to $599/month for coaching organizations.">
+    <meta name="description" content="Start free for 14 days. No credit card required. Plans from $99/month for solo coaches to $599/month for coaching organizations.">
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .pricing-grid {
@@ -65,6 +65,10 @@
             text-align: center;
         }
 
+        .pricing-card.featured .price-name {
+            color: var(--bg-white);
+        }
+
         .price-amount {
             font-size: 3rem;
             font-weight: 700;
@@ -73,10 +77,18 @@
             text-align: center;
         }
 
+        .pricing-card.featured .price-amount {
+            color: var(--bg-white);
+        }
+
         .price-period {
             font-size: 1rem;
             color: var(--text-medium);
             font-weight: 400;
+        }
+
+        .pricing-card.featured .price-period {
+            color: rgba(255, 255, 255, 0.85);
         }
 
         .price-tagline {
@@ -89,7 +101,7 @@
         }
 
         .pricing-card.featured .price-tagline {
-            color: var(--text-dark);
+            color: rgba(255, 255, 255, 0.95);
         }
 
         .price-clients {
@@ -101,7 +113,7 @@
         }
 
         .pricing-card.featured .price-clients {
-            color: var(--text-dark);
+            color: var(--bg-white);
         }
 
         .price-coaches {
@@ -112,7 +124,7 @@
         }
 
         .pricing-card.featured .price-coaches {
-            color: var(--text-dark);
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .price-features {
@@ -129,10 +141,11 @@
             margin-bottom: 0.75rem;
             font-size: 1rem;
             color: var(--text-medium);
+            text-align: left;
         }
 
         .pricing-card.featured .price-features li {
-            color: var(--text-dark);
+            color: rgba(255, 255, 255, 0.95);
         }
 
         .price-features li svg {
@@ -351,7 +364,7 @@
                 <!-- Foundation Plan -->
                 <div class="pricing-card">
                     <div class="price-name">Foundation</div>
-                    <div class="price-amount">$49<span class="price-period">/month</span></div>
+                    <div class="price-amount">$99<span class="price-period">/month</span></div>
                     <p class="price-tagline">For coaches establishing a structured, professional practice.</p>
                     <p class="price-clients">Up to 5 active clients</p>
                     <p class="price-coaches">1 coach included</p>
@@ -513,13 +526,13 @@
                     </div>
                 </div>
 
-                <!-- Impact Plan -->
+                <!-- Transformation Plan -->
                 <div class="pricing-card">
-                    <div class="price-name">Impact</div>
+                    <div class="price-name">Transformation</div>
                     <div class="price-amount">$599<span class="price-period">/month</span></div>
                     <p class="price-tagline">For established coaching organizations delivering high-volume results.</p>
                     <p class="price-clients">Up to 50 active clients</p>
-                    <p class="price-coaches">Up to 8 coaches &bull; $10/client/month beyond 50</p>
+                    <p class="price-coaches">Up to 8 coaches<br>$10/client/month beyond 50</p>
 
                     <ul class="price-features">
                         <li>
@@ -590,6 +603,13 @@
                                 <circle cx="10" cy="10" r="9" stroke="#4F7052" stroke-width="2"/>
                                 <path d="M6 10L9 13L14 7" stroke="#4F7052" stroke-width="2" stroke-linecap="round"/>
                             </svg>
+                            <span>LinkedIn Lead Tracking</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="10" cy="10" r="9" stroke="#4F7052" stroke-width="2"/>
+                                <path d="M6 10L9 13L14 7" stroke="#4F7052" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
                             <span>Dedicated Success Manager</span>
                         </li>
                         <li>
@@ -624,7 +644,7 @@
                             <th>Feature</th>
                             <th>Foundation</th>
                             <th>Growth</th>
-                            <th>Impact</th>
+                            <th>Transformation</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -665,7 +685,7 @@
                             <th>Feature</th>
                             <th>Foundation</th>
                             <th>Growth</th>
-                            <th>Impact</th>
+                            <th>Transformation</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -700,7 +720,7 @@
                             <th>Feature</th>
                             <th>Foundation</th>
                             <th>Growth</th>
-                            <th>Impact</th>
+                            <th>Transformation</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -741,7 +761,7 @@
                             <th>Feature</th>
                             <th>Foundation</th>
                             <th>Growth</th>
-                            <th>Impact</th>
+                            <th>Transformation</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -782,7 +802,7 @@
                             <th>Feature</th>
                             <th>Foundation</th>
                             <th>Growth</th>
-                            <th>Impact</th>
+                            <th>Transformation</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -829,7 +849,7 @@
                             <th>Feature</th>
                             <th>Foundation</th>
                             <th>Growth</th>
-                            <th>Impact</th>
+                            <th>Transformation</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -870,7 +890,7 @@
                             <th>Feature</th>
                             <th>Foundation</th>
                             <th>Growth</th>
-                            <th>Impact</th>
+                            <th>Transformation</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -905,7 +925,7 @@
                             <th>Feature</th>
                             <th>Foundation</th>
                             <th>Growth</th>
-                            <th>Impact</th>
+                            <th>Transformation</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -946,7 +966,7 @@
                             <th>Feature</th>
                             <th>Foundation</th>
                             <th>Growth</th>
-                            <th>Impact</th>
+                            <th>Transformation</th>
                         </tr>
                     </thead>
                     <tbody>
