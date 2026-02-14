@@ -15,17 +15,23 @@
             <a href="index.html" class="logo">
                 <img src="images/logo-full.svg" alt="Sage.coach" height="32">
             </a>
-            <ul class="nav-links">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
                 <li><a href="testimonials.html" class="active">Testimonials</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
             </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
         </div>
     </nav>
 
@@ -86,7 +92,7 @@
 
                 <!-- Testimonial 2 -->
                 <div class="card">
-                    <p class="mb-md" style="font-size: 1.125rem; font-style: italic;">"CoachOS roadmaps mean I'm not making it up as I go. I know what's next. My clients know what's next. We both have less anxiety and faster results."</p>
+                    <p class="mb-md" style="font-size: 1.125rem; font-style: italic;">"Sage roadmaps mean I'm not making it up as I go. I know what's next. My clients know what's next. We both have less anxiety and faster results."</p>
                     <div style="display: flex; align-items: center; gap: 1rem;">
                         <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--bg-light); border: 2px solid var(--border-color); flex-shrink: 0;"></div>
                         <div>
@@ -129,9 +135,10 @@
             <h2 class="mb-md">Stop Guessing. Start Systematizing.</h2>
             <p class="mb-lg" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem;">See if Sage makes your coaching more effective and less chaotic in two weeks.</p>
             <div class="btn-group">
-                <a href="pricing.html" class="btn btn-primary">Start 14-Day Trial</a>
+                <a href="https://app.sage.coach" class="btn btn-primary">Start Free 14-Day Trial</a>
                 <a href="contact.html" class="btn btn-outline">Talk to a Coach Using Sage</a>
             </div>
+            <p style="margin-top: 1rem; font-size: 0.9375rem; color: var(--text-light);">No credit card required • 14 days full access • Cancel anytime</p>
         </div>
     </section>
 
@@ -140,7 +147,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>About Sage.coach</h4>
-                <p>CoachOS is the operating system for career coaching. Sage is the platform built on CoachOS.</p>
+                <p>Sage is the operating system for career coaching. The operating system for career coaching.</p>
                 <div class="social-links">
                     <a href="#" aria-label="LinkedIn">in</a>
                     <a href="#" aria-label="Twitter">𝕏</a>
@@ -169,9 +176,11 @@
         </div>
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2024 Sage.coach. All rights reserved.</p>
+                <p>&copy; 2026 Sage.coach. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

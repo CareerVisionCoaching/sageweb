@@ -15,24 +15,30 @@
             <a href="index.html" class="logo">
                 <img src="images/logo-full.svg" alt="Sage.coach" height="32">
             </a>
-            <ul class="nav-links">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="how-it-works.html" class="active">How It Works</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
             </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" style="padding: 4rem 0;">
         <div class="container text-center">
-            <h1>How CoachOS Works (Concrete, Not Conceptual)</h1>
+            <h1>How Sage Works (Concrete, Not Conceptual)</h1>
             <p style="max-width: 700px; margin: 0 auto; font-size: 1.125rem;">Three things you do with every client. Sage makes each one actually manageable.</p>
         </div>
     </section>
@@ -58,6 +64,10 @@
                             <li style="margin-bottom: 0.75rem;">Automatic flagging when someone stalls at a milestone</li>
                             <li>Task dependencies that keep work sequenced logically</li>
                         </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
                     </div>
                     <div class="card" style="background: var(--accent-light); border-left: 4px solid var(--dark-sage);">
                         <p style="margin: 0; font-weight: 600; color: var(--dark-sage);">What this solves: No more "what should we work on next?" moments. The roadmap tells you.</p>
@@ -103,6 +113,10 @@
                             <li style="margin-bottom: 0.5rem;">Documents they've shared or you've assigned</li>
                             <li>AI-generated prep brief based on where they are</li>
                         </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
                     </div>
                     <div class="card mb-md">
                         <p class="mb-sm"><strong>During the session</strong>, you coach. Take notes if you want, or let AI transcribe.</p>
@@ -158,6 +172,10 @@
                             <li style="margin-bottom: 0.75rem;">Which milestones consistently cause friction</li>
                             <li>Client engagement metrics</li>
                         </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
                     </div>
                     <p class="mb-md">Use this to refine your approach. Figure out what works. Stop guessing.</p>
                     <div class="card" style="background: var(--accent-light); border-left: 4px solid var(--dark-sage);">
@@ -192,11 +210,12 @@
     <section class="section section-alt">
         <div class="container text-center">
             <h2 class="mb-md">See It In Action</h2>
-            <p class="mb-lg" style="font-size: 1.125rem; max-width: 600px; margin: 0 auto 2rem;">Watch how CoachOS turns coaching chaos into systematic practice management.</p>
+            <p class="mb-lg" style="font-size: 1.125rem; max-width: 600px; margin: 0 auto 2rem;">Watch how Sage turns coaching chaos into systematic practice management.</p>
             <div class="btn-group">
-                <a href="contact.html" class="btn btn-primary">Watch 3-Min Demo</a>
+                <a href="https://app.sage.coach" class="btn btn-primary">Start Free 14-Day Trial</a>
                 <a href="contact.html" class="btn btn-outline">Talk to a Coach Using Sage</a>
             </div>
+            <p style="margin-top: 1rem; font-size: 0.9375rem; color: var(--text-light);">No credit card required • 14 days full access • Cancel anytime</p>
         </div>
     </section>
 
@@ -205,7 +224,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>About Sage.coach</h4>
-                <p>CoachOS is the operating system for career coaching. Sage is the platform built on CoachOS - giving your practice repeatability without rigidity.</p>
+                <p>Sage is the operating system for career coaching. The operating system for career coaching - giving your practice repeatability without rigidity.</p>
                 <div class="social-links">
                     <a href="#" aria-label="LinkedIn">in</a>
                     <a href="#" aria-label="Twitter">𝕏</a>
@@ -234,9 +253,11 @@
         </div>
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2024 Sage.coach. All rights reserved.</p>
+                <p>&copy; 2026 Sage.coach. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
