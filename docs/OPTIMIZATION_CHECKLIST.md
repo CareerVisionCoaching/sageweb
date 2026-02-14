@@ -419,7 +419,7 @@ Sitemap: https://sage.coach/sitemap.xml
 
 ### External Links
 
-- [ ] "Start Free Trial" goes to `https://app.sage.coach/signup`
+- [ ] "Start Free Trial" goes to `https://app.sage.coach`
 - [ ] "Login" goes to `https://app.sage.coach/login`
 - [ ] Cal.com embed loads in modal
 - [ ] All external links open in same tab (or new tab if preferred)
