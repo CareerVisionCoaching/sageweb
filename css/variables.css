@@ -11,9 +11,9 @@
      COLOR PALETTE
      ========================================== */
 
-  /* Primary Colors */
-  --color-sage-green: #A3B9A0;
-  --color-deep-forest: #355C4C;
+  /* Primary Colors (Official Brand Guidelines) */
+  --color-sage-green: #ACCAAF;
+  --color-deep-forest: #4F7052;
   --color-soft-ivory: #F9F9F6;
   --color-charcoal-gray: #222222;
   --color-accent-light-green: #DCE6DC;
@@ -38,7 +38,7 @@
      ========================================== */
 
   /* Font Families */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-primary: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;
 
   /* Font Sizes - Headings */
   --font-size-h1-desktop: 64px;

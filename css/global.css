@@ -24,7 +24,7 @@ body {
   font-size: var(--font-size-body-regular);
   line-height: var(--line-height-body-regular);
   color: var(--color-gray-900);
-  background-color: var(--color-white);
+  background-color: var(--color-soft-ivory); /* Soft Ivory for warmth */
   overflow-x: hidden;
 }
 
@@ -34,7 +34,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-charcoal-gray);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold); /* Reduced from bold for calm aesthetic */
   line-height: var(--line-height-h1);
   margin-bottom: var(--spacing-xs);
 }
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: var(--font-size-h1-desktop);
   letter-spacing: var(--letter-spacing-tight);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold); /* Reduced from bold */
 }
 
 h2 {
