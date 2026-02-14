@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Sage.coach</title>
-    <meta name="description" content="Sage exists because I got exhausted rebuilding my coaching process for every client. CoachOS is what happens when someone who understands coaching builds the platform they actually need.">
+    <meta name="description" content="Sage exists because I got exhausted rebuilding my coaching process for every client. Sage is what happens when someone who understands coaching builds the platform they actually need.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
@@ -15,17 +15,23 @@
             <a href="index.html" class="logo">
                 <img src="images/logo-full.svg" alt="Sage.coach" height="32">
             </a>
-            <ul class="nav-links">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
             </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
         </div>
     </nav>
 
@@ -33,7 +39,7 @@
     <section class="hero" style="padding: 4rem 0;">
         <div class="container text-center">
             <h1>Built By Someone Who Was Tired Of The Chaos</h1>
-            <p style="max-width: 700px; margin: 0 auto; font-size: 1.125rem;">CoachOS is what happens when someone who understands coaching builds the platform they actually need.</p>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.125rem;">Sage is what happens when someone who understands coaching builds the platform they actually need.</p>
         </div>
     </section>
 
@@ -45,7 +51,7 @@
                     <h2 class="mb-md">Mission</h2>
                     <p class="mb-md">Sage exists because I got exhausted rebuilding my coaching process for every client while trying to remember which framework I used with whom and whether I followed up on that thing I said I would.</p>
                     <p class="mb-md">I'm a career coach. I've guided hundreds of tech professionals through transitions. The coaching part? I'm good at that. The administrative infrastructure to deliver coaching consistently across multiple clients simultaneously? That was killing me.</p>
-                    <p class="mb-md">So I built the operating system I needed. CoachOS is what happens when someone who understands coaching builds the platform they actually need - not what sounds good in a product demo.</p>
+                    <p class="mb-md">So I built the operating system I needed. Sage is what happens when someone who understands coaching builds the platform they actually need - not what sounds good in a product demo.</p>
                     <p>Turns out, a lot of coaches need it too.</p>
                 </div>
                 <div>
@@ -71,17 +77,44 @@
         </div>
     </section>
 
-    <!-- Our Story -->
+    <!-- Founder Background -->
     <section class="section section-alt">
         <div class="container">
             <div class="text-center mb-lg">
-                <h2>Our Story</h2>
+                <h2>Built By Someone Who's Been There</h2>
+                <p style="max-width: 700px; margin: 0 auto;">Sage was created by a career coach with over a decade of experience in product leadership and coaching.</p>
             </div>
             <div style="max-width: 900px; margin: 0 auto;">
-                <div class="card">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <div class="card" style="background: white;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--dark-sage);">150+ Clients Coached</h3>
+                        <p style="color: var(--text-medium); margin: 0;">Personally guided hundreds of mid-career tech professionals through career transitions over 1,000+ coaching sessions.</p>
+                    </div>
+                    <div class="card" style="background: white;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--dark-sage);">Proven Placements</h3>
+                        <p style="color: var(--text-medium); margin: 0;">Helped clients land roles at Google, Amazon, Salesforce, HubSpot, Notion, and dozens of high-growth startups.</p>
+                    </div>
+                    <div class="card" style="background: white;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--dark-sage);">10+ Years in Product</h3>
+                        <p style="color: var(--text-medium); margin: 0;">Background in product management and startup leadership, bringing systems thinking to coaching practice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-lg">
+                <h2>How It Started</h2>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="card" style="background: white;">
                     <p class="mb-md">After coaching my 50th client, I realized I was solving the same problems over and over but somehow treating each one like a unique snowflake from an operational standpoint. Different docs. Different tracking systems. Different ways of remembering what we talked about.</p>
                     <p class="mb-md">The frameworks worked. The human connection worked. But the infrastructure was duct tape and hope.</p>
-                    <p style="margin-bottom: 0;">Sage, built on CoachOS, is the solution to that problem. It's infrastructure that adapts to your coaching style instead of forcing you into someone else's process.</p>
+                    <p class="mb-md">Three clients in the same week missed deadlines because each thought they were waiting on the other. That was the breaking point. If I, someone obsessed with structure, couldn't keep it straight  -  how was any other coach supposed to scale this?</p>
+                    <p style="margin-bottom: 0;">Sage, built on Sage, is the solution to that problem. It's infrastructure that adapts to your coaching style instead of forcing you into someone else's process.</p>
                 </div>
             </div>
         </div>
@@ -104,7 +137,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>About Sage.coach</h4>
-                <p>CoachOS is the operating system for career coaching. Sage is the platform built on CoachOS - giving your practice repeatability without rigidity.</p>
+                <p>Sage is the operating system for career coaching. The operating system for career coaching - giving your practice repeatability without rigidity.</p>
                 <div class="social-links">
                     <a href="#" aria-label="LinkedIn">in</a>
                     <a href="#" aria-label="Twitter">𝕏</a>
@@ -133,9 +166,11 @@
         </div>
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2024 Sage.coach. All rights reserved.</p>
+                <p>&copy; 2026 Sage.coach. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

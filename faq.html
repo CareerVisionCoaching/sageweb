@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Sage.coach</title>
-    <meta name="description" content="Common questions about Sage and CoachOS from career coaches exploring systematic practice management.">
+    <meta name="description" content="Common questions about Sage and Sage from career coaches exploring systematic practice management.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
@@ -15,17 +15,24 @@
             <a href="index.html" class="logo">
                 <img src="images/logo-full.svg" alt="Sage.coach" height="32">
             </a>
-            <ul class="nav-links">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="faq.html" class="active">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
             </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
         </div>
     </nav>
 
@@ -48,12 +55,12 @@
 
                 <div class="faq-item">
                     <div class="faq-question">Will this make my coaching feel robotic or impersonal?</div>
-                    <div class="faq-answer">No. CoachOS makes your coaching more consistent and effective. The frameworks give you structure so you can focus on the human part. Think of it like a pilot's checklist - it doesn't make flying impersonal, it makes sure nothing critical gets missed.</div>
+                    <div class="faq-answer">No. Sage makes your coaching more consistent and effective. The frameworks give you structure so you can focus on the human part. Think of it like a pilot's checklist - it doesn't make flying impersonal, it makes sure nothing critical gets missed.</div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">What if my process is different from your roadmap stages?</div>
-                    <div class="faq-answer">The four CoachOS stages (Discovery, Strategy, Execution, Close) are high-level containers. You customize the milestones and tasks inside each stage to match your approach. The structure is there to keep you organized, not to dictate your methodology.</div>
+                    <div class="faq-answer">The four Sage stages (Discovery, Strategy, Execution, Close) are high-level containers. You customize the milestones and tasks inside each stage to match your approach. The structure is there to keep you organized, not to dictate your methodology.</div>
                 </div>
 
                 <div class="faq-item">
@@ -78,12 +85,12 @@
 
                 <div class="faq-item">
                     <div class="faq-question">Do I need to change how I coach?</div>
-                    <div class="faq-answer">No. CoachOS adapts to your style, not the other way around. If you already use certain frameworks or exercises, drop them into Sage. If you don't, we have templates to start with.</div>
+                    <div class="faq-answer">No. Sage adapts to your style, not the other way around. If you already use certain frameworks or exercises, drop them into Sage. If you don't, we have templates to start with.</div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">What makes CoachOS different from just using Notion or Airtable?</div>
-                    <div class="faq-answer">Those are general-purpose tools. You're still building the infrastructure. CoachOS is purpose-built for career coaching workflow - client stages, milestone tracking, session prep, AI assistance. It's the difference between building your own house and moving into one designed for how you actually live.</div>
+                    <div class="faq-question">What makes Sage different from just using Notion or Airtable?</div>
+                    <div class="faq-answer">Those are general-purpose tools. You're still building the infrastructure. Sage is purpose-built for career coaching workflow - client stages, milestone tracking, session prep, AI assistance. It's the difference between building your own house and moving into one designed for how you actually live.</div>
                 </div>
 
                 <div class="faq-item">
@@ -111,7 +118,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>About Sage.coach</h4>
-                <p>CoachOS is the operating system for career coaching. Sage is the platform built on CoachOS.</p>
+                <p>Sage is the operating system for career coaching. The operating system for career coaching.</p>
                 <div class="social-links">
                     <a href="#" aria-label="LinkedIn">in</a>
                     <a href="#" aria-label="Twitter">𝕏</a>
@@ -140,9 +147,11 @@
         </div>
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2024 Sage.coach. All rights reserved.</p>
+                <p>&copy; 2026 Sage.coach. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

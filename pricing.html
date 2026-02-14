@@ -441,17 +441,23 @@
             <a href="index.html" class="logo">
                 <img src="images/logo-full.svg" alt="Sage.coach" height="32">
             </a>
-            <ul class="nav-links">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="pricing.html" class="active">Pricing</a></li>
-                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
             </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
         </div>
     </nav>
 
@@ -459,7 +465,13 @@
     <section class="hero" style="padding: 4rem 0;">
         <div class="container text-center">
             <h1>Plans that Grow With Your Coaching Practice</h1>
-            <p style="max-width: 640px; margin: 0 auto;">Start free for 14 days. No credit card required.</p>
+            <p style="max-width: 640px; margin: 0 auto; font-size: 1.125rem;">Start free for 14 days. No credit card required.</p>
+            <!-- Trust Indicators -->
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap; font-size: 0.9375rem; color: var(--text-medium);">
+                <span>✓ No credit card required</span>
+                <span>✓ 14 days full access</span>
+                <span>✓ Cancel anytime</span>
+            </div>
         </div>
     </section>
 
@@ -541,9 +553,13 @@
                             <span>No AI features</span>
                         </li>
                     </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
 
                     <div class="price-cta">
-                        <button onclick="window.location.href='contact.html'" class="btn btn-secondary">Start Free</button>
+                        <button onclick="window.location.href='https://app.sage.coach'" class="btn btn-secondary">Start Free</button>
                     </div>
                 </div>
 
@@ -634,9 +650,13 @@
                             <span>Optional Onboarding Call</span>
                         </li>
                     </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
 
                     <div class="price-cta">
-                        <button onclick="window.location.href='contact.html'" class="btn btn-primary">Start Free</button>
+                        <button onclick="window.location.href='https://app.sage.coach'" class="btn btn-primary">Start Free</button>
                     </div>
                 </div>
 
@@ -741,9 +761,13 @@
                             <span>25GB Storage</span>
                         </li>
                     </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
 
                     <div class="price-cta">
-                        <button onclick="window.location.href='contact.html'" class="btn btn-secondary">Start Free</button>
+                        <button onclick="window.location.href='https://app.sage.coach'" class="btn btn-secondary">Start Free</button>
                     </div>
                 </div>
 
@@ -777,20 +801,20 @@
                         </tr>
                         <tr>
                             <td>Custom Roadmaps</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>AI Roadmap Suggestions</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>AI-Generated Roadmaps</td>
-                            <td><span class="dash-icon">—</span></td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                     </tbody>
@@ -818,14 +842,14 @@
                         </tr>
                         <tr>
                             <td>AI Review Summaries</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>AI Rewrite &amp; Consistency Tools</td>
-                            <td><span class="dash-icon">—</span></td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                     </tbody>
@@ -853,20 +877,20 @@
                         </tr>
                         <tr>
                             <td>AI Keyword Match</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>Resume Tailoring</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>Predictive Analytics</td>
-                            <td><span class="dash-icon">—</span></td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                     </tbody>
@@ -894,20 +918,20 @@
                         </tr>
                         <tr>
                             <td>AI Outreach Builder</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>Shared Org Network</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>Org Social Graph</td>
-                            <td><span class="dash-icon">—</span></td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                     </tbody>
@@ -935,26 +959,26 @@
                         </tr>
                         <tr>
                             <td>Multi-Coach Collaboration</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>Coach Productivity Insights</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>AI Attention Engine</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>Team Hierarchy</td>
-                            <td><span class="dash-icon">—</span></td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                     </tbody>
@@ -994,8 +1018,8 @@
                         </tr>
                         <tr>
                             <td>Expansion Pricing</td>
-                            <td><span class="dash-icon">—</span></td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td>$10/client/month</td>
                         </tr>
                     </tbody>
@@ -1023,14 +1047,14 @@
                         </tr>
                         <tr>
                             <td>AI Session Agendas</td>
-                            <td><span class="dash-icon">—</span></td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>AI Session Summaries</td>
-                            <td><span class="dash-icon">—</span></td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                     </tbody>
@@ -1058,19 +1082,19 @@
                         </tr>
                         <tr>
                             <td>Org Analytics</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>Business Dashboard</td>
-                            <td><span class="dash-icon">—</span></td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>Custom Programs</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
@@ -1099,14 +1123,14 @@
                         </tr>
                         <tr>
                             <td>Onboarding Call</td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td>Paid Add-On</td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                         <tr>
                             <td>Dedicated Success Manager</td>
-                            <td><span class="dash-icon">—</span></td>
-                            <td><span class="dash-icon">—</span></td>
+                            <td><span class="dash-icon"> - </span></td>
+                            <td><span class="dash-icon"> - </span></td>
                             <td><span class="check-icon">✓</span></td>
                         </tr>
                     </tbody>
@@ -1235,7 +1259,7 @@
         <div class="container text-center" style="max-width: 640px;">
             <h2>Start your 14-day free trial</h2>
             <p style="font-size: 1.25rem;">No credit card required.</p>
-            <a href="contact.html" class="btn btn-primary" style="background: var(--bg-white); color: var(--dark-sage);">Start Free Trial</a>
+            <a href="https://app.sage.coach" class="btn btn-primary" style="background: var(--bg-white); color: var(--dark-sage);">Start Free Trial</a>
         </div>
     </section>
 
@@ -1257,12 +1281,14 @@
                     <a href="contact.html">Contact</a>
                 </nav>
                 <div class="footer-legal">
-                    <p>&copy; 2025 Sage.coach</p>
+                    <p>&copy; 2026 Sage.coach</p>
                     <a href="privacy.html">Privacy</a>
                     <a href="terms.html">Terms</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

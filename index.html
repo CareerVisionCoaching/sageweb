@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sage.coach - The Operating System For Career Coaching</title>
-    <meta name="description" content="Stop rebuilding your coaching process for every client. Sage and CoachOS give career coaches the infrastructure to deliver consistent results without the chaos.">
+    <meta name="description" content="Stop rebuilding your coaching process for every client. Sage and Sage give career coaches the infrastructure to deliver consistent results without the chaos.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
@@ -15,17 +15,23 @@
             <a href="index.html" class="logo">
                 <img src="images/logo-full.svg" alt="Sage.coach" height="32">
             </a>
-            <ul class="nav-links">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
             </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
         </div>
     </nav>
 
@@ -35,12 +41,18 @@
             <h1>The Operating System For Career Coaching</h1>
             <p>Stop rebuilding your process for every client. Deliver consistent results without the chaos.</p>
             <div class="btn-group">
-                <a href="how-it-works.html" class="btn btn-primary">See How It Works</a>
-                <a href="contact.html" class="btn btn-secondary">Talk to a Coach Who Uses Sage</a>
+                <a href="https://app.sage.coach" class="btn btn-primary">Start Free 14-Day Trial</a>
+                <a href="how-it-works.html" class="btn btn-secondary">See How It Works</a>
             </div>
+            <p style="margin-top: 1rem; font-size: 0.9375rem; color: var(--text-light);">No credit card required • 14 days free • Cancel anytime</p>
             <div class="progress-bar">
                 <div class="progress-fill"></div>
             </div>
+        </div>
+        <div class="hero-image" style="max-width: 1000px; margin: 3rem auto 0; padding: 0 2rem;">
+            <img src="images/hero-dashboard-mockup.png"
+                 alt="Sage dashboard showing client roadmaps, session tracking, and progress management"
+                 style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 20px 60px rgba(79, 112, 82, 0.3);">
         </div>
     </section>
 
@@ -86,7 +98,7 @@
         </div>
     </section>
 
-    <!-- What CoachOS Actually Is -->
+    <!-- What Sage Actually Is -->
     <section class="section section-alt">
         <div class="container">
             <div class="text-center mb-lg">
@@ -190,7 +202,7 @@
                 </div>
                 <div class="card">
                     <h3>Get Results Faster</h3>
-                    <p>Coaches using Sage report 83% faster time to job offer. Not magic - CoachOS catches what might slip and keeps nothing from falling through the cracks.</p>
+                    <p>Coaches using Sage report 83% faster time to job offer. Not magic - Sage catches what might slip and keeps nothing from falling through the cracks.</p>
                 </div>
             </div>
         </div>
@@ -215,7 +227,7 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <p class="testimonial-quote">"CoachOS roadmaps gave me the structure I needed without feeling robotic. My clients know where they stand, and so do I."</p>
+                    <p class="testimonial-quote">"Sage roadmaps gave me the structure I needed without feeling robotic. My clients know where they stand, and so do I."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar"></div>
                         <div class="testimonial-info">
@@ -243,9 +255,9 @@
     <section class="section section-alt">
         <div class="container text-center">
             <h2 class="mb-md">This Is Where Coaching Is Headed</h2>
-            <p class="mb-lg" style="font-size: 1.25rem; max-width: 700px; margin: 0 auto 2rem;">You can keep building one-off experiences and hoping they work. Or you can run your practice on CoachOS and focus on what you're actually good at.</p>
+            <p class="mb-lg" style="font-size: 1.25rem; max-width: 700px; margin: 0 auto 2rem;">You can keep building one-off experiences and hoping they work. Or you can run your practice on Sage and focus on what you're actually good at.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="contact.html" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">Try Sage Free for 14 Days</a>
+                <a href="https://app.sage.coach" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">Start Free 14-Day Trial</a>
                 <a href="contact.html" class="btn btn-outline" style="font-size: 1.125rem; padding: 1rem 2.5rem;">Talk to a Coach Using Sage</a>
             </div>
             <p style="margin-top: 1.5rem; color: var(--text-muted); font-size: 0.9rem;">If it doesn't make your coaching more effective and less chaotic in two weeks, you don't pay.</p>
@@ -254,41 +266,46 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About Sage.coach</h4>
-                <p>CoachOS is the operating system for career coaching. Sage is the platform built on CoachOS - giving your practice repeatability without rigidity.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn">in</a>
-                    <a href="#" aria-label="Twitter">𝕏</a>
-                    <a href="#" aria-label="Facebook">f</a>
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; padding: 3rem 0;">
+                <div>
+                    <h4 style="margin-bottom: 1rem; font-size: 1rem; font-weight: 600;">Product</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="how-it-works.html" style="color: var(--text-medium); text-decoration: none;">How It Works</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="pricing.html" style="color: var(--text-medium); text-decoration: none;">Pricing</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="roadmap.html" style="color: var(--text-medium); text-decoration: none;">Roadmaps</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="faq.html" style="color: var(--text-medium); text-decoration: none;">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem; font-size: 1rem; font-weight: 600;">Company</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: var(--text-medium); text-decoration: none;">About</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="testimonials.html" style="color: var(--text-medium); text-decoration: none;">Testimonials</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="blog.html" style="color: var(--text-medium); text-decoration: none;">Blog</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: var(--text-medium); text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem; font-size: 1rem; font-weight: 600;">Legal</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="terms.html" style="color: var(--text-medium); text-decoration: none;">Terms of Service</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="privacy.html" style="color: var(--text-medium); text-decoration: none;">Privacy Policy</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="cookies.html" style="color: var(--text-medium); text-decoration: none;">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem; font-size: 1rem; font-weight: 600;">Contact</h4>
+                    <p style="color: var(--text-medium); margin-bottom: 0.5rem;">hello@sage.coach</p>
+                    <p style="color: var(--text-medium);">support@sage.coach</p>
                 </div>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <a href="about.html">About Us</a>
-                <a href="how-it-works.html">How It Works</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="blog.html">Blog</a>
-            </div>
-            <div class="footer-section">
-                <h4>Support</h4>
-                <a href="faq.html">FAQ</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: hello@sage.coach</p>
-                <p>Support: support@sage.coach</p>
-            </div>
-        </div>
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2024 Sage.coach. All rights reserved.</p>
+            <div style="border-top: 1px solid var(--border-color); padding: 2rem 0; text-align: center;">
+                <p style="color: var(--text-medium);">&copy; 2026 Sage.coach. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -15,17 +15,23 @@
             <a href="index.html" class="logo">
                 <img src="images/logo-full.svg" alt="Sage.coach" height="32">
             </a>
-            <ul class="nav-links">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
             </ul>
+            <div class="nav-cta-buttons">
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-login" target="_blank" rel="noopener noreferrer">Log In</a>
+                <a href="https://app.sage.coach" class="btn-nav btn-nav-cta" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
         </div>
     </nav>
 
@@ -45,7 +51,7 @@
                 <p style="max-width: 700px; margin: 0 auto;">Fill out the form below and we'll get back to you within 24 hours to schedule.</p>
             </div>
             <div style="max-width: 700px; margin: 0 auto;">
-                <form class="card" onsubmit="event.preventDefault(); alert('Form submission would be processed here. Thank you for your interest!');">
+                <form class="card" action="https://formspree.io/f/xanykqgg" method="POST">
                     <div class="form-group">
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required placeholder="Your name">
@@ -83,12 +89,15 @@
                         <textarea id="pain-point" name="pain-point" required placeholder="Describe the main operational challenge in your coaching practice..."></textarea>
                     </div>
 
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - Sage.coach">
+                    <input type="hidden" name="_replyto" value="josh@sage.coach">
+
                     <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1rem;">
                         Book a Walkthrough
                     </button>
 
                     <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-light); text-align: center;">
-                        By submitting this form, you agree to our <a href="#" style="color: var(--dark-sage);">Privacy Policy</a>.
+                        By submitting this form, you agree to our <a href="privacy.html" style="color: var(--dark-sage);">Privacy Policy</a>.
                     </p>
                 </form>
             </div>
@@ -124,7 +133,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>About Sage.coach</h4>
-                <p>CoachOS is the operating system for career coaching. Sage is the platform built on CoachOS.</p>
+                <p>Sage is the operating system for career coaching. The operating system for career coaching.</p>
                 <div class="social-links">
                     <a href="#" aria-label="LinkedIn">in</a>
                     <a href="#" aria-label="Twitter">𝕏</a>
@@ -153,9 +162,11 @@
         </div>
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2024 Sage.coach. All rights reserved.</p>
+                <p>&copy; 2026 Sage.coach. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
